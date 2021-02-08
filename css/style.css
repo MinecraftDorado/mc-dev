@@ -1,0 +1,13 @@
+:root {
+    --background-color:#3F78CC;
+    --navbar: #3361A6;
+    --botton: #4786E6;
+    --botton-select: #4D90F5;
+    --text: white;
+    --text-hover: #203C66;
+    --logo: white;
+    --content-line: white;
+}
+body {
+    background-color: var(--background-color);
+}

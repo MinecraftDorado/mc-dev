@@ -1,0 +1,41 @@
+.content {
+    margin-top: 150px;
+}
+.content ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.content .limit {
+    height: 500px;
+    border: var(--content-line) 3px solid;
+    border-radius: 5px;
+    font-size: 0;
+}
+.content .items img {
+    max-height: 450px;
+}
+.content .items img:hover {
+    height: 475px;
+    max-height: 475px;
+}
+
+/*
+  Responsive
+*/
+
+@media all and (max-width: 900px){
+    .content ul {
+        flex-direction: column;
+    }
+    .content .items img {
+        height: 250px;
+    }
+    .content .limit {
+        height: auto;
+        visibility: hidden;
+    }
+}
