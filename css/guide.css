@@ -1,21 +1,22 @@
 section {
-    margin: 20px 50px 10px 50px;
-    background-color: #d4d3d32a;
-    border: 1px #b4b4b4 solid;
+    margin: 20px auto 10px;
+    background-color: var(--guide-background);
+    border: 1px var(--guide-border) solid;
     border-radius: 5px;
-    padding: 0 75px 15px;
+    max-width: 80%;
+    padding: 35px 75px 15px;
 }
 #index img, #slots img, #custom_name img, #statistics img, #perks img, #menus img, #sell img, #npc img {
     margin-top: 15px;
     float: right;
     clear: both;
-    max-width: 500px
+    width: 500px;
 }
 #index ul {
     margin-top: 50px;
     margin-left: 30px;
-    background-color: #F8F9FA;
-    border: 3px solid #97cffa;
+    background-color: var(--guide-index-backgroud);
+    border: 3px solid var(--guide-index-border);
     padding: 10px 0 0 10px;
     width: 150px;
     font-size: 14px;
@@ -26,14 +27,14 @@ section {
 }
 #index li a {
     text-decoration: none;
-    color: black;
+    color: var(--guide-index-text);
 }
 #index li a:hover {
-    color: #1c67c9;
+    color: var(--guide-index-text-hover);
 }
 
 section h3, section h4 {
-    color: #ffffff;
+    color: var(--guide-title);
     background: none;
     font-weight: normal;
     margin: 0;
@@ -50,6 +51,9 @@ section h3, section h4 {
 #permissions ul > ul {
     margin: 5px 0 5px 35px;
 }
+#statistics li, #perks li, #commands li, #permissions li {
+    color: var(--guide-text);
+}
 #commands li code, #permissions li code {
     margin-right: 0;
 }
@@ -59,19 +63,19 @@ section h3, section h4 {
     padding: 0;
 }
 info {
-    color: red;
+    color: var(--guide-info);
     font-weight: bold;
 }
 
 section h2 {
-    color: white;
+    color: var(--guide-title);
     font: normal normal normal 28px/35px "title",cursive;
     padding: 25px 35px 25px 15px;
     text-align: left;
 }
 
 section p {
-    color: white;
+    color: var(--guide-text);
     padding: 15px 15px;
     font-family: "desc";
     word-break: break-word;
@@ -81,12 +85,12 @@ section p {
 }
 
 section a {
-    color: #61abff;
+    color: var(--guide-link);
 }
 
 section i, desc {
     font-family: "desc italic";
-    color: white;
+    color: var(--guide-description);
     display: grid;
     padding: 0 15px;
     margin: 15px 0;
@@ -105,43 +109,46 @@ section p i {
 }
 
 desc {
-    border-left: solid #0180ca 2px;
+    border-left: solid var(--guide-description-border) 2px;
     margin: 15px 15px;
     font-size: 25px;
     padding: 10px 15px;
 }
 
-pre code {
-    background-color: #eee;
-    border: 1px solid #999;
+.cmd {
+    background-color: var(--guide-code-background);
+    border: 1px solid var(--guide-code-border);
+    color: var(--guide-code-text);
+    display: inline-flex;
+    padding: 2px 2.5px;
+    margin-top: 2px;
+}
+
+.code {
+    background-color: var(--guide-code-background);
+    color: var(--guide-code-text);
+    border: 1px solid var(--guide-code-border);
     display: block;
     padding: 10px;
-    margin: 15px 15px;
+    margin: 15px;
 }
 
-code {
-    background-color: white;
-    color: black;
-    padding: 2px 2.5px;
-    margin: 15px 15px;
-}
-
-section p code {
+section p .code {
     margin: 0;
 }
 
-section p code i {
+section p .code i {
     color: black;
     font: inherit;
     font-style: italic;
 }
 
 .spoiler {
-    background-color: #D9D9D9;
-    color: #535353;
+    background-color: var(--guide-spoiler);
+    color: var(--guide-text);
     border: none;
     border-radius: 6px;
-    box-shadow: 0 3px #999;
+    box-shadow: 0 3px var(--guide-spoiler-shadow);
     padding: 4px;
     margin-bottom: 10px;
     margin: 15px 15px 0;
@@ -155,11 +162,11 @@ section p code i {
         border-left: none;
         border-right: none;
         padding: 0 5px 15px;
+        max-width: 100%;
     }
 
     #index img, #slots img, #custom_name img, #statistics img, #perks img, #menus img, #sell img, #npc img {
         float: none;
-        width: 100%;
-        margin-left: 10%;
+        max-width: 100%;
     }
 }

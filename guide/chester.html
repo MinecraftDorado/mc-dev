@@ -63,11 +63,11 @@
         <div id="commands">
             <h4>Commands</h4>
             <ul>
-                <li><code>/chester spawn (type)</code> - <i>Spawn a Chester</i></li>
-                <li><code>/chester add (slots/perkpoints) (amount) [player]</code> - <i>Add slots/perkpoints to
+                <li><p class="cmd">/chester spawn (type)</p> - <i>Spawn a Chester</i></li>
+                <li><p class="cmd">/chester add (slots/perkpoints) (amount) [player]</p> - <i>Add slots/perkpoints to
                         player</i></li>
-                <li><code>/chester reload</code> - <i>Reload settings</i></li>
-                <li><code>/chester delete [player]</code> - <i>Delete a Chester</i></li>
+                <li><p class="cmd">/chester reload</p> - <i>Reload settings</i></li>
+                <li><p class="cmd">/chester delete [player]</p> - <i>Delete a Chester</i></li>
             </ul>
         </div>
         <div id="permissions">
@@ -149,7 +149,7 @@
 
             <button type="button" onclick="show('perks_spoiler')" class="spoiler">example.yml</button>
 
-            <pre><code id="perks_spoiler" style="display: none;">
+            <p class="code" id="perks_spoiler" style="display: none;">
 type: ALL_RESISTANCE # ( SPEED, FIRE_RESISTANCE, ITEM_FINDER, ITEM_KEEPER, ALL_RESISTANCE, MAX_HEALTH, REG_BOOST, PROJECTILE_RESISTANCE, EXPLOSION_RESISTANCE )
 item:
 type: SHIELD
@@ -175,7 +175,7 @@ value: 45
 6:
 price: 100
 value: 60
-        </code></pre>
+        </p>
         </div>
 
         <div id="chester_type">
@@ -185,7 +185,7 @@ value: 60
                 create an .yml file with the name you want and paste the code below:</p>
             <button type="button" onclick="show('type_spoiler')" class="spoiler">example.yml</button>
 
-            <pre><code id="type_spoiler" style="display: none;">
+            <p class="code" id="type_spoiler" style="display: none;">
 name: Present Chester
 material: CYAN_SHULKER_BOX
 max_health: 200
@@ -230,18 +230,18 @@ food: # Material or ID/DATA and Health
 - WHEAT 2
 - MILK_BUCKET 5
 - EGG 1
-    </code></pre>
+    </p>
         </div>
 
         <div id="languages">
             <h4>Languages</h4>
             <p>The plugin brings English and Spanish language. If you want to change the displayed language, you
                 have to replace the current one with a new one in config.yml:</p>
-            <pre><code>lang: ENGLISH</code></pre>
+            <p class="code">lang: ENGLISH</p>
             <p>If you want to add your own language, it is as simple as changing the messages below:</p>
             <button type="button" onclick="show('message_spoiler')" class="spoiler">messages.yml</button>
 
-            <pre><code id="message_spoiler" style="display: none;">
+            <p class="code" id="message_spoiler" style="display: none;">
 no_permission: "&cYou don't have permission to use this command!"
 command:
 spawn:
@@ -387,7 +387,7 @@ name: "&bUpgraded"
 lore:
 - "&8» &7Type: &b%perk_type%"
 - "&8» &7Value: &b%perk_value%"
-    </code></pre>
+    </p>
         </div>
     </section>
 </body>

@@ -1,4 +1,5 @@
 :root {
+    /*  NAVBAR  */
     --background-color: #033C54;
     --navbar: #014969;
 
@@ -9,13 +10,42 @@
     --text-hover: #CADAEB;
     --logo: #CADAEB;
 
+    /*  TITLE   */
     --title: #92D2F7;
     --title-font-family: Whitney,Helvetica Neue,Helvetica,Arial,sans-serif;
     --title-description: #92C2DE;
     
+    /*  CONTENT */
     --content-background: var(--navbar);
     --content-title: var(--title);
     --content-text: var(--title-description);
+
+    /*  GUIDE   */
+    --guide-background: #014969;
+    --guide-border: #01435f;
+
+    /*  INDEX   */
+    --guide-index-backgroud: #F8F9FA;
+    --guide-index-border: #CADAEB;
+    --guide-index-text: black;
+    --guide-index-text-hover: #1c67c9;
+
+    /*  MISC    */
+    --guide-title: #ffffff;
+    --guide-text: white;
+    --guide-description: #c9c9c9;
+    --guide-description-border: #0180ca;
+    --guide-link: #00ce56;
+    --guide-info: red;
+    
+    /*  CODE    */
+    --guide-code-background: white;
+    --guide-code-border: #999;
+    --guide-code-text: black;
+
+    /*  SPOILER */
+    --guide-spoiler: var(--botton);
+    --guide-spoiler-shadow: #033C54;
 }
 body {
     background-color: var(--background-color);
