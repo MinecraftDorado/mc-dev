@@ -1,13 +1,25 @@
 :root {
-    --background-color:#3F78CC;
-    --navbar: #3361A6;
-    --botton: #4786E6;
-    --botton-select: #4D90F5;
-    --text: white;
-    --text-hover: #203C66;
-    --logo: white;
-    --content-line: white;
+    --background-color: #033C54;
+    --navbar: #014969;
+
+    --botton: #014969;
+    --botton-select: #034e6e;
+
+    --text: #CADAEB;
+    --text-hover: #CADAEB;
+    --logo: #CADAEB;
+
+    --title: #92D2F7;
+    --title-font-family: Whitney,Helvetica Neue,Helvetica,Arial,sans-serif;
+    --title-description: #92C2DE;
+    
+    --content-background: var(--navbar);
+    --content-title: var(--title);
+    --content-text: var(--title-description);
 }
 body {
     background-color: var(--background-color);
+}
+::-webkit-scrollbar {
+    display: none;
 }

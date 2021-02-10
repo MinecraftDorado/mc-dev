@@ -1,0 +1,165 @@
+section {
+    margin: 20px 50px 10px 50px;
+    background-color: #d4d3d32a;
+    border: 1px #b4b4b4 solid;
+    border-radius: 5px;
+    padding: 0 75px 15px;
+}
+#index img, #slots img, #custom_name img, #statistics img, #perks img, #menus img, #sell img, #npc img {
+    margin-top: 15px;
+    float: right;
+    clear: both;
+    max-width: 500px
+}
+#index ul {
+    margin-top: 50px;
+    margin-left: 30px;
+    background-color: #F8F9FA;
+    border: 3px solid #97cffa;
+    padding: 10px 0 0 10px;
+    width: 150px;
+    font-size: 14px;
+    list-style: none
+}
+#index li {
+    margin-bottom: 5px;
+}
+#index li a {
+    text-decoration: none;
+    color: black;
+}
+#index li a:hover {
+    color: #1c67c9;
+}
+
+section h3, section h4 {
+    color: #ffffff;
+    background: none;
+    font-weight: normal;
+    margin: 0;
+    padding-top: .5em;
+    padding-bottom: .17em;
+    border-bottom: 1px solid #aaa;
+    clear: both;
+    font-size: 1.5rem;
+}
+
+#commands > ul, #permissions > ul, #statistics > ul, #perks > ul {
+    margin: 15px 0 0 50px;
+}
+#permissions ul > ul {
+    margin: 5px 0 5px 35px;
+}
+#commands li code, #permissions li code {
+    margin-right: 0;
+}
+#commands li i, #perks li i, #permissions li i {
+    display: unset;
+    margin: 0;
+    padding: 0;
+}
+info {
+    color: red;
+    font-weight: bold;
+}
+
+section h2 {
+    color: white;
+    font: normal normal normal 28px/35px "title",cursive;
+    padding: 25px 35px 25px 15px;
+    text-align: left;
+}
+
+section p {
+    color: white;
+    padding: 15px 15px;
+    font-family: "desc";
+    word-break: break-word;
+    vertical-align: baseline;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+section a {
+    color: #61abff;
+}
+
+section i, desc {
+    font-family: "desc italic";
+    color: white;
+    display: grid;
+    padding: 0 15px;
+    margin: 15px 0;
+}
+
+section p i {
+    padding: 0;
+    margin: 0;
+    display: inline;
+}
+
+#date {
+    float: right;
+    font-style: italic;
+    font-family: "desc";
+}
+
+desc {
+    border-left: solid #0180ca 2px;
+    margin: 15px 15px;
+    font-size: 25px;
+    padding: 10px 15px;
+}
+
+pre code {
+    background-color: #eee;
+    border: 1px solid #999;
+    display: block;
+    padding: 10px;
+    margin: 15px 15px;
+}
+
+code {
+    background-color: white;
+    color: black;
+    padding: 2px 2.5px;
+    margin: 15px 15px;
+}
+
+section p code {
+    margin: 0;
+}
+
+section p code i {
+    color: black;
+    font: inherit;
+    font-style: italic;
+}
+
+.spoiler {
+    background-color: #D9D9D9;
+    color: #535353;
+    border: none;
+    border-radius: 6px;
+    box-shadow: 0 3px #999;
+    padding: 4px;
+    margin-bottom: 10px;
+    margin: 15px 15px 0;
+}
+
+@media all and (max-width: 900px){
+
+    section {
+        display: block;
+        margin: 20px 0 5px;
+        border-left: none;
+        border-right: none;
+        padding: 0 5px 15px;
+    }
+
+    #index img, #slots img, #custom_name img, #statistics img, #perks img, #menus img, #sell img, #npc img {
+        float: none;
+        width: 100%;
+        margin-left: 10%;
+    }
+}
