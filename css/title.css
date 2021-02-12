@@ -1,5 +1,5 @@
 .title {
-    margin: 150px auto 50px;
+    margin: 9rem auto 3rem;
     max-width: 55%;
     align-items: center;
     text-align: center;
@@ -7,15 +7,27 @@
 .title h2 {
     word-break: break-word;
     font-weight: 500;
-    font-size: 26px;
+    font-size: 1.65rem;
     line-height: 34px;
     font-family: var(--title-font-family);
     color: var(--title);
 }
 .title p {
     word-break: break-word;
-    font-size: 18px;
+    font-size: 1.1rem;
     line-height: 30px;
     font-family: var(--title-font-family);
     color: var(--title-description);
+}
+
+
+/*
+  Responsive
+*/
+
+@media all and (max-width: 900px){
+    .title {
+        margin: 4.5rem auto 3rem;
+        max-width: 75%;
+    }
 }

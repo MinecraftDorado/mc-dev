@@ -9,8 +9,8 @@
 
 nav{
   background: var(--navbar);
-  padding: 5px 70px;
-  margin: 0 3em 0 3em;
+  padding: .4rem 4.5rem;
+  margin: 0 3rem 0 3rem;
   border-radius: 0 0 15px 15px;
   max-height: 100%;
 }
@@ -24,14 +24,14 @@ nav ul{
 }
 
 nav ul li{
-  padding: 15px 0;
+  padding: 1rem 0;
   cursor: pointer;
 }
 
 nav ul li.items{
   position: relative;
   width: auto;
-  margin: 0 16px;
+  margin: 0 1rem;
   text-align: center;
   order: 3;
 }
@@ -50,20 +50,20 @@ nav ul li.items:after{
 
 nav ul li.items:hover:after{
   opacity: 1;
-  bottom: 8px;
+  bottom: .5rem;
 }
 
 nav ul li.logo{
   flex: 2;
   color: var(--logo);
-  font-size: 23px;
+  font-size: 1.5rem;
   font-weight: 600;
   cursor: default;
   user-select: none;
 }
 nav ul li a{
   color: var(--text);
-  font-size: 18px;
+  font-size: 1.15rem;
   text-decoration: none;
   transition: .4s;
 }
@@ -83,7 +83,7 @@ nav ul li.btn.hide i:before{
 
 nav ul ul{
   position: absolute;
-  top: 40px;
+  top: 2.5rem;
   opacity: 0;
   visibility: hidden;
   background-color: var(--botton);
@@ -92,13 +92,13 @@ nav ul ul{
   border-radius: 0 0 15px 15px;
 }
 nav ul li:hover > ul{
-  top: 60px;
+  top: 4rem;
   opacity: 1;
   visibility: visible;
   transition: .3s linear;
 }
 nav ul ul li{
-  width: 150px;
+  width: 8rem;
 }
 nav .list li:hover {
   background-color: var(--botton-select);
@@ -127,7 +127,7 @@ nav .list .btn:hover {
 
 @media all and (max-width: 900px){
   nav{
-    padding: 0 30px;
+    padding: 0 2rem;
     border-radius: 0;
     margin: 0;
   }

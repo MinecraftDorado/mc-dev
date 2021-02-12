@@ -1,41 +1,41 @@
 .content {
-    margin: 150px 0 10px 0;
+    margin: 9rem 0 .6rem 0;
     display: flex;
     flex-direction: row;
-    flex-basis: 345px;
+    flex-basis: 21.56rem;
     flex-flow: row wrap;
-    gap: 20px;
+    gap: 1.25rem;
     justify-content: center;
 }
 .content .items {
     background-color: var(--content-background);
-    width: 345px;
-    height: 330px;
+    width: 21.56rem;
+    height: 20.62rem;
     text-align: center;
-    border-radius: 5px;
+    border-radius: 10px;
     text-decoration: none;
 }
 .content .items img {
-    padding-top: 20px;
-    max-height: 125px;
+    padding-top: 1.25rem;
+    max-height: 7.81rem;
 }
 .content .items p {
     color: var(--content-text);
     word-break: break-word;
-    font-size: 20px;
+    font-size: 1.25rem;
     line-height: 1.5;
-    padding: 10px 20px 5px 20px;
+    padding: .625rem 1.25rem .312rem 1.25rem;
 }
 .content .items h3 {
     color: var(--content-title);
     word-break: break-word;
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: 700;
     line-height: 30px;
-    padding: 20px 20px 5px 20px;
+    padding: 1.25rem 1.25rem .312rem;
 }
 .content .items:hover {
-    margin-top: -10px;
+    margin-top: -.625rem;
     background-color: var(--botton-select);
     transition-duration: .3s;
 }

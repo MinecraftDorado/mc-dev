@@ -30,6 +30,7 @@ section {
 }
 #index li a:hover {
     color: var(--guide-index-text-hover);
+    text-decoration: underline;
 }
 
 section h3, section h4 {
@@ -121,9 +122,10 @@ desc {
     display: inline-flex;
     padding: 2px 2.5px;
     margin-top: 2px;
+    margin-left: 0px;
 }
 
-.code {
+code {
     background-color: var(--guide-code-background);
     color: var(--guide-code-text);
     border: 1px solid var(--guide-code-border);
@@ -132,11 +134,7 @@ desc {
     margin: 15px;
 }
 
-section p .code {
-    margin: 0;
-}
-
-section p .code i {
+section code i {
     color: black;
     font: inherit;
     font-style: italic;

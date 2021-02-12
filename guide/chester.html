@@ -86,7 +86,7 @@
             <img src="../img/chester/slots.png"></img>
             <p>Slots are spaces in Chester's inventory. Can be bought using <a
                     href="https://www.spigotmc.org/resources/vault.34315/" target="_blank">Vault</a> as
-                dependency or with the command: <code>/chester add slots (amount) [player]</code>.</p>
+                dependency or with the command: <p class="cmd">/chester add slots (amount) [player]</p></p>
             <p>
                 <info>(i) </info>Chester picks up loose objects on the floor, if he no longer has slots
                 available in the inventory, he will not be able to pick up anything else.
@@ -149,7 +149,7 @@
 
             <button type="button" onclick="show('perks_spoiler')" class="spoiler">example.yml</button>
 
-            <p class="code" id="perks_spoiler" style="display: none;">
+            <pre><code id="perks_spoiler" style="display: none;">
 type: ALL_RESISTANCE # ( SPEED, FIRE_RESISTANCE, ITEM_FINDER, ITEM_KEEPER, ALL_RESISTANCE, MAX_HEALTH, REG_BOOST, PROJECTILE_RESISTANCE, EXPLOSION_RESISTANCE )
 item:
 type: SHIELD
@@ -175,7 +175,7 @@ value: 45
 6:
 price: 100
 value: 60
-        </p>
+            </code></pre>
         </div>
 
         <div id="chester_type">
@@ -185,7 +185,7 @@ value: 60
                 create an .yml file with the name you want and paste the code below:</p>
             <button type="button" onclick="show('type_spoiler')" class="spoiler">example.yml</button>
 
-            <p class="code" id="type_spoiler" style="display: none;">
+            <pre><code class="code" id="type_spoiler" style="display: none;">
 name: Present Chester
 material: CYAN_SHULKER_BOX
 max_health: 200
@@ -230,18 +230,18 @@ food: # Material or ID/DATA and Health
 - WHEAT 2
 - MILK_BUCKET 5
 - EGG 1
-    </p>
+            </code></pre>
         </div>
 
         <div id="languages">
             <h4>Languages</h4>
             <p>The plugin brings English and Spanish language. If you want to change the displayed language, you
                 have to replace the current one with a new one in config.yml:</p>
-            <p class="code">lang: ENGLISH</p>
+            <pre><code>lang: ENGLISH</code></pre>
             <p>If you want to add your own language, it is as simple as changing the messages below:</p>
             <button type="button" onclick="show('message_spoiler')" class="spoiler">messages.yml</button>
 
-            <p class="code" id="message_spoiler" style="display: none;">
+            <pre><code id="message_spoiler" style="display: none;">
 no_permission: "&cYou don't have permission to use this command!"
 command:
 spawn:
@@ -387,7 +387,7 @@ name: "&bUpgraded"
 lore:
 - "&8» &7Type: &b%perk_type%"
 - "&8» &7Value: &b%perk_value%"
-    </p>
+            </code></pre>
         </div>
     </section>
 </body>
