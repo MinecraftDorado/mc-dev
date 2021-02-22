@@ -1,19 +1,19 @@
 :root {
     /*  NAVBAR  */
-    --background-color: #0D1D2B;
-    --navbar: #112538;
+    --background-color: #0d1117;
+    --navbar: #161b22;
 
-    --botton: #112538;
+    --botton: #21262d;
     --botton-select: #102233;
 
-    --text: #CADAEB;
-    --text-hover: #CADAEB;
+    --text: #f0f6fc;
+    --text-hover: #f0f6fcb3;
     --logo: #CADAEB;
 
     /*  TITLE   */
-    --title: #1D3F5E;
+    --title: #c9d1d9;
     --title-font-family: Whitney,Helvetica Neue,Helvetica,Arial,sans-serif;
-    --title-description: #255078;
+    --title-description: #8b949e;
     
     /*  CONTENT */
     --content-background: var(--navbar);

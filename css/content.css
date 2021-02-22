@@ -15,9 +15,10 @@
     border-radius: 10px;
     text-decoration: none;
 }
-.content .items img {
+.content .items img, .content .items svg {
     padding-top: 1.25rem;
     max-height: 7.81rem;
+    fill: var(--text);
 }
 .content .items p {
     color: var(--content-text);
