@@ -6,3 +6,7 @@
 ### Guide
 
 <img src="https://i.gyazo.com/08483188283f6260c0330faed74e455c.png">
+
+### Guide format v2
+
+<img src="https://i.gyazo.com/afea00ee6dcece24552196ce993abad3.png">
