@@ -10,3 +10,7 @@
 ### Guide format v2
 
 <img src="https://i.gyazo.com/afea00ee6dcece24552196ce993abad3.png">
+
+### Guide format v3
+
+<img src="https://i.gyazo.com/c4e2e948821044432ee53beeeb04ccda.png">
