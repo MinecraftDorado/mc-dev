@@ -7,7 +7,8 @@
 
     <link href="../css/style.css" rel="stylesheet">
     <link href="../css/navbar.css" rel="stylesheet">
-    <link href="../css/guide-3.css" rel="stylesheet">
+    <link href="../css/guide/cards.css" rel="stylesheet">
+    <link href="../css/guide/content.css" rel="stylesheet">
 
     <script type="text/javascript" src="../js/spoiler.js"></script>
 
@@ -42,50 +43,109 @@
     </nav>
 
     <section>
-        <a class="card">
-            <div class="title"><h3>Lorem, ipsum dolor.</h3></div>
-            <div class="text"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, maiores?</p></div>
-        </a>
-        <a class="card config">
-            <div class="title"><h3>Lorem, ipsum dolor.</h3></div>
-            <div class="text"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, maiores?</p></div>
-        </a>
-        <a class="card">
-            <div class="title"><h3>Lorem, ipsum dolor.</h3></div>
-            <div class="text"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, maiores?</p></div>
-        </a>
-        <a class="card">
-            <div class="title"><h3>Lorem, ipsum dolor.</h3></div>
-            <div class="text"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, maiores?</p></div>
-        </a>
-        <a class="card">
-            <div class="title"><h3>Lorem, ipsum dolor.</h3></div>
-            <div class="text"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, maiores?</p></div>
-        </a>
-        <a class="card">
-            <div class="title"><h3>Lorem, ipsum dolor.</h3></div>
-            <div class="text"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, maiores?</p></div>
-        </a>
-        <a class="card">
-            <div class="title"><h3>Lorem, ipsum dolor.</h3></div>
-            <div class="text"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, maiores?</p></div>
-        </a>
-        <a class="card">
-            <div class="title"><h3>Lorem, ipsum dolor.</h3></div>
-            <div class="text"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, maiores?</p></div>
-        </a>
-        <a class="card">
-            <div class="title"><h3>Lorem, ipsum dolor.</h3></div>
-            <div class="text"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, maiores?</p></div>
-        </a>
-        <a class="card">
-            <div class="title"><h3>Lorem, ipsum dolor.</h3></div>
-            <div class="text"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, maiores?</p></div>
-        </a>
-        <a class="card">
-            <div class="title"><h3>Lorem, ipsum dolor.</h3></div>
-            <div class="text"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, maiores?</p></div>
-        </a>
+        <div class="cards">
+            <a class="card command" href="#commands">
+                <div class="title"><h3>Lorem, ipsum dolor.</h3></div>
+                <div class="text"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, maiores?</p></div>
+            </a>
+            <a class="card permission" href="#permissions">
+                <div class="title"><h3>Lorem, ipsum dolor.</h3></div>
+                <div class="text"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, maiores?</p></div>
+            </a>
+            <a class="card inventory" href="#slots">
+                <div class="title"><h3>Lorem, ipsum dolor.</h3></div>
+                <div class="text"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, maiores?</p></div>
+            </a>
+            <a class="card custom_name" href="#custom_name">
+                <div class="title"><h3>Lorem, ipsum dolor.</h3></div>
+                <div class="text"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, maiores?</p></div>
+            </a>
+            <a class="card perk" href="#perks">
+                <div class="title"><h3>Lorem, ipsum dolor.</h3></div>
+                <hr>
+                <div class="text"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, maiores?</p></div>
+            </a>
+            <a class="card statistic" href="#statistics">
+                <div class="title"><h3>Lorem, ipsum dolor.</h3></div>
+                <div class="text"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, maiores?</p></div>
+            </a>
+            <a class="card chest" href="#chester_type">
+                <div class="title"><h3>Lorem, ipsum dolor.</h3></div>
+                <div class="text"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, maiores?</p></div>
+            </a>
+            <a class="card papyrus" href="#languages">
+                <div class="title"><h3>Lorem, ipsum dolor.</h3></div>
+                <div class="text"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, maiores?</p></div>
+            </a>
+            <a class="card config" href="#config">
+                <div class="title"><h3>Lorem, ipsum dolor.</h3></div>
+                <div class="text"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, maiores?</p></div>
+            </a>
+        </div>
+        <div class="contents">
+            <div class="content" id="commands">
+                <div class="title"><h3>Commands</h3></div>
+                <div class="text">
+                    <ul>
+                        <li><p class="cmd">/chester spawn (type)</p> - <i>Spawn a Chester</i></li>
+                        <li><p class="cmd">/chester add (slots/perkpoints) (amount) [player]</p> - <i>Add slots/perkpoints to
+                                player</i></li>
+                        <li><p class="cmd">/chester reload</p> - <i>Reload settings</i></li>
+                        <li><p class="cmd">/chester delete [player]</p> - <i>Delete a Chester</i></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="content" id="permissions">
+                <div class="title"><h3>Permissions</h3></div>
+                <div class="text">
+                    <ul>
+                        <li><p class="cmd">chester.admin</p> - <i>Allow use all commands</i></li>
+                        <ul>
+                            <li><p class="cmd">chester.spawn.*</p> - <i>Lorem ipsum dolor sit amet.</i></li>
+                            <ul>
+                                <li><p class="cmd">chester.spawn."type"</p> - <i>Lorem ipsum dolor sit amet.</i></li>
+                            </ul>
+                            <li><p class="cmd">chester.add</p> - <i>Lorem ipsum dolor sit amet.</i></li>
+                            <li><p class="cmd">chester.reload</p> - <i>Lorem ipsum dolor sit amet.</i></li>
+                            <li><p class="cmd">chester.custom_name.color</p> - <i>Lorem ipsum dolor sit amet.</i></li>
+    
+                            <li><p class="cmd">chester.recipe.*</p> - <i>Lorem ipsum dolor sit amet.</i></li>
+                            <ul>
+                                <li><p class="cmd">chester.recipe."type"</p> - <i>Lorem ipsum dolor sit amet.</i></li>
+                            </ul>
+                        </ul>
+                    </ul>
+                </div>
+            </div>
+            <div class="content" id="slots">
+                <div class="title"><h3>Slots</h3></div>
+                <div class="text"><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore culpa, maiores exercitationem expedita dolor inventore aut aperiam cupiditate reprehenderit. Accusamus quibusdam, tempora consequatur atque reiciendis eos consectetur enim! Quos veniam pariatur totam quibusdam et provident! Porro eos neque id, est natus doloribus sint, quod enim reprehenderit nemo corrupti nobis atque.</p></div>
+            </div>
+            <div class="content" id="custom_name">
+                <div class="title"><h3>Custom name</h3></div>
+                <div class="text"><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore culpa, maiores exercitationem expedita dolor inventore aut aperiam cupiditate reprehenderit. Accusamus quibusdam, tempora consequatur atque reiciendis eos consectetur enim! Quos veniam pariatur totam quibusdam et provident! Porro eos neque id, est natus doloribus sint, quod enim reprehenderit nemo corrupti nobis atque.</p></div>
+            </div>
+            <div class="content" id="perks">
+                <div class="title"><h3>Perks</h3></div>
+                <div class="text"><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore culpa, maiores exercitationem expedita dolor inventore aut aperiam cupiditate reprehenderit. Accusamus quibusdam, tempora consequatur atque reiciendis eos consectetur enim! Quos veniam pariatur totam quibusdam et provident! Porro eos neque id, est natus doloribus sint, quod enim reprehenderit nemo corrupti nobis atque.</p></div>
+            </div>
+            <div class="content" id="statistics">
+                <div class="title"><h3>Statistics</h3></div>
+                <div class="text"><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore culpa, maiores exercitationem expedita dolor inventore aut aperiam cupiditate reprehenderit. Accusamus quibusdam, tempora consequatur atque reiciendis eos consectetur enim! Quos veniam pariatur totam quibusdam et provident! Porro eos neque id, est natus doloribus sint, quod enim reprehenderit nemo corrupti nobis atque.</p></div>
+            </div>
+            <div class="content" id="chester_type">
+                <div class="title"><h3>Chester type</h3></div>
+                <div class="text"><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore culpa, maiores exercitationem expedita dolor inventore aut aperiam cupiditate reprehenderit. Accusamus quibusdam, tempora consequatur atque reiciendis eos consectetur enim! Quos veniam pariatur totam quibusdam et provident! Porro eos neque id, est natus doloribus sint, quod enim reprehenderit nemo corrupti nobis atque.</p></div>
+            </div>
+            <div class="content" id="languages">
+                <div class="title"><h3>Languages</h3></div>
+                <div class="text"><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore culpa, maiores exercitationem expedita dolor inventore aut aperiam cupiditate reprehenderit. Accusamus quibusdam, tempora consequatur atque reiciendis eos consectetur enim! Quos veniam pariatur totam quibusdam et provident! Porro eos neque id, est natus doloribus sint, quod enim reprehenderit nemo corrupti nobis atque.</p></div>
+            </div>
+            <div class="content" id="config">
+                <div class="title"><h3>Config</h3></div>
+                <div class="text"><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore culpa, maiores exercitationem expedita dolor inventore aut aperiam cupiditate reprehenderit. Accusamus quibusdam, tempora consequatur atque reiciendis eos consectetur enim! Quos veniam pariatur totam quibusdam et provident! Porro eos neque id, est natus doloribus sint, quod enim reprehenderit nemo corrupti nobis atque.</p></div>
+            </div>
+        </div>
     </section>
 </body>
 </html>

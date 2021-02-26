@@ -14,3 +14,5 @@
 ### Guide format v3
 
 <img src="https://i.gyazo.com/c4e2e948821044432ee53beeeb04ccda.png">
+<img src="https://i.gyazo.com/9cb0823af9e3609cce5dc1a1c54461c2.png">
+<img src="https://i.gyazo.com/e84b22453abff55f77986fa4a57f0629.png">

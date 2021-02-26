@@ -1,0 +1,72 @@
+:root {
+    --content-background-color: var(--guide-background);
+    --content-background-ratio: 6px;
+}
+
+.contents {
+    margin: 14.3rem auto .6rem;
+    border-radius: 5px;
+    max-width: 80%;
+    padding: 35px 75px 15px;
+
+    display: flex;
+    flex-direction: column;
+    flex-basis: 21.56rem;
+    flex-flow: column wrap;
+    gap: 1.25rem 0;
+}
+
+.content {
+    background-color: var(--content-background-color);
+    border-radius: var(--content-background-ratio);
+
+    color: var(--content-text);
+
+    width: 100%;
+    min-height: 16.25rem;
+
+    cursor: default;
+}
+
+.content > .title {
+    color: var(--content-title);
+    padding: .25rem 0 .5rem 1.5rem;
+    word-break: break-word;
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+.content > .text {
+    color: var(--content-text);
+    word-break: break-word;
+    font-size: 1.15rem;
+    font-weight: 400;
+    line-height: 1.5;
+    padding: .625rem 2rem .312rem;
+}
+
+.content .text > ul {
+    margin: .125rem 0 .125rem 1rem;
+}
+
+.content ul > ul {
+    margin: .125rem 0 .125rem 2rem;
+}
+
+.content li {
+    color: var(--guide-text);
+}
+
+.content .cmd {
+    background-color: var(--guide-code-background);
+    border: 1px solid var(--guide-code-border);
+    color: var(--guide-code-text);
+    display: inline-flex;
+    padding: 2px 2.5px;
+    margin-top: 2px;
+    margin-left: 0px;
+}
+.content ul:last-child {
+    margin-bottom: 1rem;
+}
