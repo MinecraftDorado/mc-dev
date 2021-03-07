@@ -7,7 +7,8 @@
 
     <link href="../css/style.css" rel="stylesheet">
     <link href="../css/navbar.css" rel="stylesheet">
-    <link href="../css/guide.css" rel="stylesheet">
+    <link href="../css/guide/cards.css" rel="stylesheet">
+    <link href="../css/guide/content.css" rel="stylesheet">
 
     <script type="text/javascript" src="../js/spoiler.js"></script>
 
@@ -42,72 +43,104 @@
     </nav>
 
     <section>
-        <div class="content">
-            <div id="index">
-                <h3>BlackMarket Guide</h3>
-                <p>» Here you can find all the information about the plugin and its settings. If you find any error, 
-                    do not hesitate to mention it in my discord <a
-                        href="https://discordapp.com/channels/@Demon/4531/" target="_blank">Demon#4531</a></p>
-                <img src="../img/blackmarket/market.png"></img>
-                <ul>
-                    <li><a href="#commands">Commands</a></li>
-                    <li><a href="#permissions">Permissions</a></li>
-                    <li><a href="#sell">Sell items</a></li>
-                    <li><a href="#menus">Menus</a></li>
-                    <li><a href="#npc">NPC</a></li>
-                    <li><a href="#config">Configuration</a></li>
-                    <li><a href="#languages">Languages</a></li>
-                </ul>
-            </div>
-            <div id="commands">
-                <h4>Commands</h4>
-                <ul>
-                    <li><p class="cmd">/bm sell [value]</p> - <i>Sell a item</i></li>
-                    <li><p class="cmd">/bm reload</p> - <i>Reload config</i></li>
-                    <li><p class="cmd">/bm setnpc (skin_name)</p> - <i>Set a NPC</i></li>
-                    <li><p class="cmd">/bm removenpc</p> - <i>Remove a NPC</i></li>
-                    <li><p class="cmd">/bm open</p> - <i>Open the BlackMarket</i></li>
-                </ul>
-            </div>
-            <div id="permissions">
-                <h4>Permissions</h4>
-                <ul>
-                    <li><p class="cmd">blackmarket.admin</p> - <i>Allow use all commands</i></li>
+        <div class="cards">
+            <a class="card command" href="#commands">
+                <div class="title"><h3>Commands</h3></div>
+                <div class="text"><p>List with all the plugin commands.</p></div>
+            </a>
+            <a class="card permission" href="#permissions">
+                <div class="title"><h3>Permissions</h3></div>
+                <div class="text"><p>Configure the access that users will have to the commands</p></div>
+            </a>
+            <a class="card sell" href="#sell">
+                <div class="title"><h3>How sell a item?</h3></div>
+                <div class="text"><p>You have two options to publish an item, with commands or through the menu</p></div>
+            </a>
+            <a class="card statistic" href="#statistics">
+                <div class="title"><h3>Statistics</h3></div>
+                <div class="text"><p>*Coming soon*</p></div>
+            </a>
+            <a class="card blacklist" href="#blacklist">
+                <div class="title"><h3>BlackList</h3></div>
+                <div class="text"><p>List of materials that are blocked for publication in the store.</p></div>
+            </a>
+            <a class="card categories" href="#categories">
+                <div class="title"><h3>Categories</h3></div>
+                <div class="text"><p>Create a list with the materials of your category</p></div>
+            </a>
+            <a class="card papyrus" href="#languages">
+                <div class="title"><h3>Languages</h3></div>
+                <div class="text"><p>Configure the messages of the commands, menus, items, etc. There are many languages added!</p></div>
+            </a>
+            <a class="card config" href="#config">
+                <div class="title"><h3>Configuration</h3></div>
+                <div class="text"><p>Change the values for taxes, materials, menus, command aliases, etc.</p></div>
+            </a>
+        </div>
+
+        <div class="contents">
+            <div class="content" id="commands">
+                <div class="title"><h3>Commands</h3></div>
+                <div class="text">
                     <ul>
-                        <li><p class="cmd">blackmarket.open</p> - <i>Allow use open command</i></li>
-                        <li><p class="cmd">blackmarket.reload</p> - <i>Allow use reload command</i></li>
-                        <li><p class="cmd">blackmarket.npc</p> - <i>Allow use setnpc and removenpc commands</i></li>
-                        <ul>
-                            <li><p class="cmd">blackmarket.setnpc</p> - <i>Allow use setnpc command</i></li>
-                            <li><p class="cmd">blackmarket.removenpc</p> - <i>Allow use removenpc command</i></li>
-                        </ul>
-                        <li><p class="cmd">blackmarket.limit</p> - <i>Unlimited items in sell</i></li>
-                        <li><p class="cmd">blackmarket.limit[number]</p> - <i>Limited items in sell</i></li>
+                        <li><p class="cmd">/bm sell [value]</p> - <i>Sell a item</i></li>
+                        <li><p class="cmd">/bm reload</p> - <i>Reload config</i></li>
+                        <li><p class="cmd">/bm setnpc (skin_name)</p> - <i>Set a NPC</i></li>
+                        <li><p class="cmd">/bm removenpc</p> - <i>Remove a NPC</i></li>
+                        <li><p class="cmd">/bm open (player)</p> - <i>Open the BlackMarket</i></li>
                     </ul>
-                </ul>
+                </div>
             </div>
-            <div id="sell">
-                <h4>Sell</h4>
-                <img src="../img/blackmarket/market.png"></img>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium maxime iusto commodi id exercitationem optio officiis veniam mollitia molestias iure laudantium quasi facere, quo, beatae perspiciatis repellendus? Eaque, soluta totam?</p>
+            
+            <div class="content" id="permissions">
+                <div class="title"><h3>Permissions</h3></div>
+                <div class="text">
+                    <ul>
+                        <li><p class="cmd">blackmarket.admin</p> - <i>Allow use all commands</i></li>
+                        <ul>
+                            <li><p class="cmd">blackmarket.open</p> - <i>Allow use open command</i></li>
+                            <li><p class="cmd">blackmarket.reload</p> - <i>Allow use reload command</i></li>
+                            <li><p class="cmd">blackmarket.npc</p> - <i>Allow use setnpc and removenpc commands</i></li>
+                            <ul>
+                                <li><p class="cmd">blackmarket.setnpc</p> - <i>Allow use setnpc command</i></li>
+                                <li><p class="cmd">blackmarket.removenpc</p> - <i>Allow use removenpc command</i></li>
+                            </ul>
+                            <li><p class="cmd">blackmarket.limit</p> - <i>Unlimited items in sell</i></li>
+                            <li><p class="cmd">blackmarket.limit[number]</p> - <i>Limited items in sell</i></li>
+                        </ul>
+                    </ul>
+                </div>
             </div>
-            <div id="menus">
-                <h4>Menus</h4>
-                <img src="../img/blackmarket/storage.png"></img>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum perspiciatis, consectetur nesciunt nisi cum necessitatibus.</p>
-            </div>
-            <div id="npc">
-                <h4>NPC</h4>
-                <img src="../img/blackmarket/market.png"></img>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit voluptates similique natus, eius quod nemo?</p>
-            </div>
-            <div id="config">
-                <h4>Config</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque minima nemo libero facilis asperiores. Ut.</p>
 
-                <button type="button" onclick="show('config_spoiler')" class="spoiler">config.yml</button>
-
-                <p class="code" id="config_spoiler" style="display: none;">
+            <div class="content" id="sell">
+                <div class="title"><h3>Sell</h3></div>
+                <div class="text">
+                    <img src="../img/blackmarket/market.png"></img>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium maxime iusto commodi id exercitationem optio officiis veniam mollitia molestias iure laudantium quasi facere, quo, beatae perspiciatis repellendus? Eaque, soluta totam?</p>
+                </div>
+            </div>
+            <div class="content" id="menus">
+                <div class="title"><h3>Menus</h3></div>
+                <div class="text">
+                    <img src="../img/blackmarket/storage.png"></img>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum perspiciatis, consectetur nesciunt nisi cum necessitatibus.</p>
+                </div>
+            </div>
+            <div class="content" id="npc">
+                <div class="title"><h3>NPC</h3></div>
+                <div class="text">
+                    <img src="../img/blackmarket/market.png"></img>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit voluptates similique natus, eius quod nemo?</p>
+                </div>
+            </div>
+            <div class="content" id="config">
+                <div class="title"><h3>Configuration</h3></div>
+                <div class="text">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque minima nemo libero facilis asperiores. Ut.</p>
+    
+                    <button type="button" onclick="show('config_spoiler')" class="spoiler">config.yml</button>
+    
+                    <p class="code" id="config_spoiler" style="display: none;">
 name: Present Chester
 material: CYAN_SHULKER_BOX
 max_health: 200
@@ -117,15 +150,17 @@ item_finder_ratio: 5
 resistance:
 all: 25
 explosion: 0
-                </p>
+                    </p>
+                </div>
             </div>
-            <div id="languages">
-                <h4>Languages</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque minima nemo libero facilis asperiores. Ut.</p>
-
-                <button type="button" onclick="show('lang_spoiler')" class="spoiler">example.yml</button>
-
-                <p class="code" id="lang_spoiler" style="display: none;">
+            <div class="content" id="languages">
+                <div class="title"><h3>Languages</h3></div>
+                <div class="text">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque minima nemo libero facilis asperiores. Ut.</p>
+    
+                    <button type="button" onclick="show('lang_spoiler')" class="spoiler">example.yml</button>
+    
+                    <p class="code" id="lang_spoiler" style="display: none;">
 name: Present Chester
 material: CYAN_SHULKER_BOX
 max_health: 200
@@ -135,7 +170,8 @@ item_finder_ratio: 5
 resistance:
 all: 25
 explosion: 0
-                </p>
+                    </p>
+                </div>
             </div>
         </div>
     </section>
