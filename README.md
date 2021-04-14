@@ -2,6 +2,7 @@
 ### Index page
 
 <img src="https://i.gyazo.com/7da4051cc338f271d91e35cf20745bdd.png">
+<img src="https://i.gyazo.com/bfc42803da8200492a320ddbe7582331.png">
 
 ### Guide
 
