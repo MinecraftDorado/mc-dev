@@ -14,6 +14,9 @@
     --title: #c9d1d9;
     --title-font-family: Whitney,Helvetica Neue,Helvetica,Arial,sans-serif;
     --title-description: #8b949e;
+
+    --contact: #e4870f;
+    --contact-hover: #b87012;
     
     /*  CONTENT */
     --content-background: var(--navbar);

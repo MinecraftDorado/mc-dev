@@ -20,6 +20,15 @@
     color: var(--title-description);
 }
 
+.title a#contact {
+    color: var(--contact);
+    text-decoration: none;
+}
+
+.title a#contact:hover {
+    cursor: pointer;
+    color: var(--contact-hover);
+}
 
 /*
   Responsive
