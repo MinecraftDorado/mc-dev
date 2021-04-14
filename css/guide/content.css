@@ -5,7 +5,6 @@
 
 .contents {
     margin: 14.3rem auto .6rem;
-    border-radius: 5px;
     max-width: 80%;
     padding: 35px 75px 15px;
 
@@ -94,6 +93,10 @@
 
 .content .text > ul {
     margin: .125rem 0 .125rem 1rem;
+}
+
+.content .text > ol {
+    margin: .125rem 0 .125rem 3.5rem;
 }
 
 .content ul > ul {

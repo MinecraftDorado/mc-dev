@@ -7,7 +7,8 @@
 
     <link href="../css/style.css" rel="stylesheet">
     <link href="../css/navbar.css" rel="stylesheet">
-    <link href="../css/guide.css" rel="stylesheet">
+    <link href="../css/guide/cards.css" rel="stylesheet">
+    <link href="../css/guide/content.css" rel="stylesheet">
 
     <script type="text/javascript" src="../js/spoiler.js"></script>
 
@@ -42,150 +43,173 @@
     </nav>
 
     <section>
-        <div id="index">
-            <h3>Chester Guide</h3>
-            <p>» Here you can find all the information about the plugin and its settings. If you find any error,
-                do not hesitate to mention it in my discord <a
-                    href="https://discordapp.com/channels/@Demon/4531/" target="_blank">Demon#4531</a></p>
-            <img src="../img/chester/chester.png"></img>
-            <ul>
-                <li><a href="#commands">Commands</a></li>
-                <li><a href="#permissions">Permissions</a></li>
-                <li><a href="#slots">Slots</a></li>
-                <li><a href="#custom_name">Custom name</a></li>
-                <li><a href="#statistics">Statistics</a></li>
-                <li><a href="#perks">Perks</a></li>
-                <li><a href="#chester_type">Chester type</a></li>
-                <li><a href="#languages">Languages</a></li>
-            </ul>
+        <div class="cards">
+            <a class="card command" href="#commands">
+                <div class="title"><h3>Commands</h3></div>
+                <div class="text"><p>List with all the plugin commands.</p></div>
+            </a>
+            <a class="card permission" href="#permissions">
+                <div class="title"><h3>Permissions</h3></div>
+                <div class="text"><p>Configure the access that users will have to the commands</p></div>
+            </a>
+            <a class="card inventory" href="#slots">
+                <div class="title"><h3>Slots</h3></div>
+                <div class="text"><p>Do you want your Chester can store more items?</p></div>
+            </a>
+            <a class="card custom_name" href="#custom_name">
+                <div class="title"><h3>Custom name</h3></div>
+                <div class="text"><p>Give your faithful companion a new name</p></div>
+            </a>
+            <a class="card perk" href="#perks">
+                <div class="title"><h3>Perks?</h3></div>
+                <hr>
+                <div class="text"><p>Yes, you read that right!. You can improve your Chester</p></div>
+            </a>
+            <a class="card statistic" href="#statistics">
+                <div class="title"><h3>Statistics</h3></div>
+                <div class="text"><p>Do you want to know what he has done all this time?</p></div>
+            </a>
+            <a class="card chest" href="#chester_type">
+                <div class="title"><h3>Chester type</h3></div>
+                <div class="text"><p>Wow, there are quite a few types of Chesters</p></div>
+            </a>
+            <a class="card papyrus" href="#languages">
+                <div class="title"><h3>Languages</h3></div>
+                <div class="text"><p>Do you want another language? Do you want to modify the messages? Click here!</p></div>
+            </a>
+            <a class="card config" href="#config">
+                <div class="title"><h3>Config</h3></div>
+                <div class="text"><p>If you want to change something this is the right place</p></div>
+            </a>
+            <a class="card config" href="#filters">
+                <div class="title"><h3>Filters</h3></div>
+                <div class="text"><p>Choose which items your partner can collect</p></div>
+            </a>
         </div>
+        <div class="contents">
+            <div class="content" id="commands">
+                <div class="title"><h3>Commands</h3></div>
+                <div class="text">
+                    <p>These are all the commands you can execute, remember that you need the permissions.</p>
+                    <ul>
+                        <li><p class="cmd">/chester spawn (type)</p> - <i>Spawn a Chester</i></li>
+                        <li><p class="cmd">/chester add (slots/perkpoints) (amount) [player]</p> - <i>Add slots/perkpoints to
+                                player</i></li>
+                        <li><p class="cmd">/chester reload</p> - <i>Reload settings</i></li>
+                        <li><p class="cmd">/chester delete [player]</p> - <i>Delete a Chester</i></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="content" id="permissions">
+                <div class="title"><h3>Permissions</h3></div>
+                <div class="text">
+                    <p>Set the permissions correctly, you don't want someone to get free stuff.</p>
+                    <ul>
+                        <li><p class="cmd">chester.admin</p> - <i>Allow use all commands</i></li>
+                        <ul>
+                            <li><p class="cmd">chester.spawn.*</p> - <i>Spawn any Chester type</i></li>
+                            <ul>
+                                <li><p class="cmd">chester.spawn."type"</p> - <i>Spawn this Chester type</i></li>
+                            </ul>
+                            <li><p class="cmd">chester.add</p> - <i>Useful to get points</i></li>
+                            <li><p class="cmd">chester.reload</p> - <i>Reload config</i></li>
+                            <li><p class="cmd">chester.custom_name.color</p> - <i>Use colors in the custom name</i></li>
+    
+                            <li><p class="cmd">chester.recipe.*</p> - <i>Allow craft all Chester types</i></li>
+                            <ul>
+                                <li><p class="cmd">chester.recipe."type"</p> - <i>Allow craft this Chester type</i></li>
+                            </ul>
+                        </ul>
+                    </ul>
+                </div>
+            </div>
+            <div class="content" id="slots">
+                <div class="title"><h3>Slots</h3></div>
+                <div class="text">
+                    <p>Are spaces in Chester's inventory. Can be bought using <a href="https://www.spigotmc.org/resources/34315/" target="_blank">Vault</a> as dependency or with the command: <code>/chester add slots (amount) [player]</code>.</p>
+                    <i class="info">Chester picks up loose objects on the floor, if he no longer has slots available in the inventory, he will not be able to pick up anything else.</i>
+                    <i class="info">The maximum number of slots that each type of Chester can have to can be modified within its .yml (types/<b>type</b>.yml).</i>
+                </div>
+            </div>
+            <div class="content" id="custom_name">
+                <div class="title"><h3>Custom name</h3></div>
+                <div class="text">
+                    <p>To rename our Chester, it is necessary to right-click it, open the profile menu and select the item <b>'Custon name'</b>. When the menu closes, the new name must be written in the chat.</p>
+                    <i class="info">To write the name in colors, we need to have the permission '<i>chester.custom_name.color</i>'</i>
+                </div>
+            </div>
+            <div class="content" id="perks">
+                <div class="title"><h3>Perks</h3></div>
+                <div class="text">
+                    <p>Perks are improvements that can be assigned to our Chester, these can be purchased with perkpoints, the plugin's own currency.</p>
+                    <p>Current types of perks include following:</p>
 
-        <div id="commands">
-            <h4>Commands</h4>
-            <ul>
-                <li><p class="cmd">/chester spawn (type)</p> - <i>Spawn a Chester</i></li>
-                <li><p class="cmd">/chester add (slots/perkpoints) (amount) [player]</p> - <i>Add slots/perkpoints to
-                        player</i></li>
-                <li><p class="cmd">/chester reload</p> - <i>Reload settings</i></li>
-                <li><p class="cmd">/chester delete [player]</p> - <i>Delete a Chester</i></li>
-            </ul>
-        </div>
-        <div id="permissions">
-            <h4>Permissions</h4>
-            <ul>
-                <li>chester.spawn."type" or chester.spawn.*</li>
-                <li>chester.add</li>
-                <li>chester.reload</li>
-                <li>chester.custom_name.color</li>
-                <li>chester.delete and chester.delete.other</li>
-                <li>chester.recipe."type" or chester.recipe.*</li>
-            </ul>
-        </div>
-        <div id="slots">
-            <h4>Slots</h4>
-            <img src="../img/chester/slots.png"></img>
-            <p>Slots are spaces in Chester's inventory. Can be bought using <a
-                    href="https://www.spigotmc.org/resources/vault.34315/" target="_blank">Vault</a> as
-                dependency or with the command: <p class="cmd">/chester add slots (amount) [player]</p></p>
-            <p>
-                <info>(i) </info>Chester picks up loose objects on the floor, if he no longer has slots
-                available in the inventory, he will not be able to pick up anything else.
-            </p>
-            <p>
-                <info>(i) </info>The maximum number of slots that each type of Chester can have to can be
-                modified within its .yml <i>(types/<b>type</b>.yml)</i>.
-            </p>
-        </div>
-        <div id="custom_name">
-            <h4>Custom name</h4>
-            <img src="../img/chester/custom_name.png"></img>
-            <p>To rename our Chester, it is necessary to right-click it, open the profile menu and select the
-                item <strong>"Custon name"</strong>. When the menu closes, the new name must be written in the
-                chat.</p>
-            <p>
-                <info>(i) </info>To write the name in colors, we need to have the permission
-                'chester.custom_name.color'</i>
-            </p>
-        </div>
-        <div id="statistics">
-            <h4>Statistics</h4>
-            <img src="../img/chester/stats.png"></img>
-            <p>Chester brings statistics that allow him to keep track of what he was doing. Some of them are:
-            <ul>
-                <li>Distance traveled</li>
-                <li>Collected objects</li>
-                <li>Dropped objects</li>
-            </ul>
-            </p>
-            <p>They can be viewed in the <i>Profile</i> menu by placing the cursor on the item
-                <i>Statistics</i>.</p>
-        </div>
-        <div id="perks">
-            <h4>Perks</h4>
-            <img src="../img/chester/perks_inv.png"></img>
+                    <ul>
+                        <li>ALL_RESISTANCE <i>(Damage reduced)</i></li>
+                        <li>EXPLOSION_RESISTANCE <i>(Explosion damage is reduced)</i></li>
+                        <li>FIRE_RESISTANCE <i>(Fire damage is reduced)</i></li>
+                        <li>PROJECTILE_RESISTANCE <i>(Projectile damage is reduced)</i></li>
+                        <li>SPEED <i>(Speed boost)</i></li>
+                        <li>ITEM_FINDER <i>(Increase search radius)</i></li>
+                        <li>ITEM_KEEPER <i>(Reduces loss of objects)</i></li>
+                        <li>MAX_HEALTH <i>(Add max health)</i></li>
+                        <li>REG_BOOST <i>(Add regeneration boost)</i></li>
+                    </ul>
 
-            <p>Perks are improvements that can be assigned to our Chester, these can be purchased with
-                perkpoints, the plugin's
-                own currency.
-                <br /> Current types of perks include following:
-            <ul>
-                <li>ALL_RESISTANCE <i>(Damage reduced)</i></li>
-                <li>EXPLOSION_RESISTANCE <i>(Explosion damage is reduced)</i></li>
-                <li>FIRE_RESISTANCE <i>(Fire damage is reduced)</i></li>
-                <li>PROJECTILE_RESISTANCE <i>(Projectile damage is reduced)</i></li>
-                <li>SPEED <i>(Speed boost)</i></li>
-                <li>ITEM_FINDER <i>(Increase search radius)</i></li>
-                <li>ITEM_KEEPER <i>(Reduces loss of objects)</i></li>
-                <li>MAX_HEALTH <i>(Add max health)</i></li>
-                <li>REG_BOOST <i>(Add regeneration boost)</i></li>
-            </ul>
-            </p>
-            <br />
-            <p>
-                <info>(i) </info>To customize a perk or create your own, enter the yml that you want to edit and
-                change any of
-                the following values:
-            </p>
+                    <i class="info">To customize a perk or create your own, enter the yml that you want to edit and change any of the following values:</i>
 
-            <button type="button" onclick="show('perks_spoiler')" class="spoiler">example.yml</button>
-
-            <pre><code id="perks_spoiler" style="display: none;">
+                    <div>
+                        <button type="button" onclick="show('perk_spoiler')" class="spoiler">perk.yml</button>
+    
+                        <pre><code id="perk_spoiler" style="display: none;">
 type: ALL_RESISTANCE # ( SPEED, FIRE_RESISTANCE, ITEM_FINDER, ITEM_KEEPER, ALL_RESISTANCE, MAX_HEALTH, REG_BOOST, PROJECTILE_RESISTANCE, EXPLOSION_RESISTANCE )
-item:
-type: SHIELD
-name: "&bExample"
-lore:
-- "&7Example value: &b%perk_example_value%%" # %perk_(yml name)_value%
 tiers:
-1:
-price: 10
-value: 5
-2:
-price: 15
-value: 15
-3:
-price: 25
-value: 25
-4:
-price: 50
-value: 35
-5:
-price: 75
-value: 45
-6:
-price: 100
-value: 60
-            </code></pre>
-        </div>
+    1:
+        price: 10
+        value: 5
+    2:
+        price: 15
+        value: 15
+    3:
+        price: 25
+        value: 25
+    4:
+        price: 50
+        value: 35
+    5:
+        price: 75
+        value: 45
+    6:
+        price: 100
+        value: 60
+item:
+    type: SHIELD
+    name: "&bExample"
+    lore:
+    - "&7Example value: &b%perk_example_value%%" # %perk_(yml name)_value%
+                        </code></pre>
+                    </div>
+                </div>
+            </div>
+            <div class="content" id="statistics">
+                <div class="title"><h3>Statistics</h3></div>
+                <div class="text">
+                    <p>Chester brings statistics that allow him to keep track of what he was doing. Some of them are:</p>
+                    <ul>
+                        <li>Distance traveled</li>
+                        <li>Collected objects</li>
+                        <li>Dropped objects</li>
+                    </ul>
+                    <p>They can be viewed in the <i>Profile</i> menu by placing the cursor on the item <i>Statistics</i>.</p>
+                </div>
+            </div>
+            <div class="content" id="chester_type">
+                <div class="title"><h3>Chester type</h3></div>
+                <div class="text">
+                    <p>There are several types of Chesters among which are Classic and Black. If you want to create your own type, create an .yml file with the name you want and paste the code below:</p>
+                    <button type="button" onclick="show('type_spoiler')" class="spoiler">type.yml</button>
 
-        <div id="chester_type">
-            <h4>Chester type</h4>
-            <p>There are several types of Chesters among which are Classic and Black. If you want to create your
-                own type,
-                create an .yml file with the name you want and paste the code below:</p>
-            <button type="button" onclick="show('type_spoiler')" class="spoiler">example.yml</button>
-
-            <pre><code class="code" id="type_spoiler" style="display: none;">
+                    <pre><code id="type_spoiler" style="display: none;">
 name: Present Chester
 material: CYAN_SHULKER_BOX
 max_health: 200
@@ -230,35 +254,39 @@ food: # Material or ID/DATA and Health
 - WHEAT 2
 - MILK_BUCKET 5
 - EGG 1
-            </code></pre>
-        </div>
+                    </code></pre>
+                </div>
+            </div>
+            <div class="content" id="languages">
+                <div class="title"><h3>Languages</h3></div>
+                <div class="text">
+                    <p>The plugin brings English and Spanish language. If you want to change the displayed language, you have to replace the current one with a new one in config.yml:</p>
 
-        <div id="languages">
-            <h4>Languages</h4>
-            <p>The plugin brings English and Spanish language. If you want to change the displayed language, you
-                have to replace the current one with a new one in config.yml:</p>
-            <pre><code>lang: ENGLISH</code></pre>
-            <p>If you want to add your own language, it is as simple as changing the messages below:</p>
-            <button type="button" onclick="show('message_spoiler')" class="spoiler">messages.yml</button>
+                    <pre><code>lang: ENGLISH</code></pre>
 
-            <pre><code id="message_spoiler" style="display: none;">
+                    <p>If you want to add your own language, it is as simple as changing the messages below:</p>
+
+                    <button type="button" onclick="show('message_spoiler')" class="spoiler">messages.yml</button>
+
+                    <pre><code id="message_spoiler" style="display: none;">
 no_permission: "&cYou don't have permission to use this command!"
 command:
-spawn:
-message: "&eYou has spawned a Chester!"
-error: "&cChester type not found!"
-reload:
-message: "&eReloaded configuration!"
-add:
-message: "&eYou has added %amount% %type% to %player%'s Chester!"
-error: "&cYou can't add %amount% %type% to %player%'s Chester!"
-error_int_invalid: "&c(&4%error%&c) is not a valid value!"
-error_chester: "&c(&4%error%&c) hasn't a Chester!"
-error_offline: "&c(&4%error%&c) is offline!"
-delete:
-message: "&eYou has delete a %player%'s Chester!"
-error: "&c(&4%error%&c) hasn't a Chester!"
-error_offline: "&c(&4%error%&c) is offline!"
+   spawn:
+      message: "&eYou has spawned a Chester!"
+      error: "&cChester type not found!"
+      limit: "&cYou can't have more chesters!"
+   reload:
+      message: "&eReloaded configuration!"
+   add:
+      message: "&eYou has added %amount% %type% to %player%'s Chester!"
+      error: "&cYou can't add %amount% %type% to %player%'s Chester!"
+      error_int_invalid: "&c(&4%error%&c) is not a valid value!"
+      error_chester: "&c(&4%error%&c) hasn't a Chester!"
+      error_offline: "&c(&4%error%&c) is offline!"
+   delete:
+      message: "&eYou has delete a %player%'s Chester!"
+      error: "&c(&4%error%&c) hasn't a Chester!"
+      error_offline: "&c(&4%error%&c) is offline!"
 help:
 - "&aChester - Commands:"
 - "&8 » &7/chester add (slots/perkpoints) (amount) [player] &8- &7(&fAdd value to Chester&7)"
@@ -266,28 +294,41 @@ help:
 - "&8 » &7/chester spawn (type) &8- &7(&fSpawn a Chester&7)"
 - "&8 » &7/chester delete [player] &8- &7(&fDelete a Chester&7)"
 sit:
-enable: "&eI'm sitting!"
-disable: "&eI'm following!"
+   enable: "&eI'm sitting!"
+   disable: "&eI'm following!"
 spawn:
-message: "&eYou has spawned a Chester!"
-error: "&cYou already has a Chester!"
+   message: "&eYou has spawned a Chester!"
+   error: "&cYou already has a Chester!"
 main_inv:
-title: "%chester% - Profile"
+   title: "%chester% - Profile"
 inv:
-title: "%chester% - Inventory"
-message: "&eYou have a new slot for your Chester!"
-error_limit: "&cYou have already reached the limit of available slots!"
-error_money: "&cYou don't have money for this!"
+   title: "%chester% - Inventory"
+   message: "&eYou have a new slot for your Chester!"
+   error_limit: "&cYou have already reached the limit of available slots!"
+   error_money: "&cYou don't have money for this!"
 perks_inv:
-title: "%chester% - Perks - Page (%actual_page%-%pages%)"
-buy: "&eYour Chester has been updated!"
-error: "&cYou don't have perkpoints for this!"
+   title: "%chester% - Perks - Page (%actual_page%-%pages%)"
+   buy: "&eYour Chester has been updated!"
+   error: "&cYou don't have perkpoints for this!"
+filters_inv:
+   title: "%chester% - Filters"
+   message: "&e%filter_name% is %filter_status%!"
+   enable: "Allowed"
+   disable: "Denied"
 
 perkpoints_get: "&eYou got %amount% perkpoints!"
 death: "&c%chester% is death!"
 custom_name: "&eWrite a new name for your Chester!"
 custom_name_message: "&eYour Chester now be called %chester%!"
 pickup_error: "&cI can't take more items!"
+
+order:
+   format: "%active% %value%"
+   active: "&c»&4"
+   values:
+      normal: "Default"
+      id: "Material or ID"
+      amount: "Amount"
 
 #
 # Values for items:
@@ -310,84 +351,173 @@ pickup_error: "&cI can't take more items!"
 #
 
 items:
-next:
-type: PAPER
-name: "&eNext page (%perks_actual_page%-%perks_pages%)"
-previous:
-type: PAPER
-name: "&ePrevious page (%perks_actual_page%-%perks_pages%)"
-close:
-type: ARROW
-name: "&cExit"
-back:
-type: ARROW
-name: "&cReturn"
-profile:
-type: CHEST
-name: "&bProfile"
-lore:
-- ""
-- "&eClick to view!"
-info:
-type: CHEST
-name: "&bInformations"
-lore:
-- "&7Name: %chester%"
-- "&7Heath: %health%/%max_health%"
-- "&7PerkPoints: %perk_points%"
-invalid_slot:
-type: GRAY_STAINED_GLASS_PANE
-name: "&cSlot yet to be unlocked"
-lore:
-- "&8» &7Price: &b$%price%"
-- ""
-- "&eClick to purchase!"
-invalid_slot_for_buy:
-type: GRAY_STAINED_GLASS_PANE
-name: "&cSlot yet to be unlocked"
-change_name:
-type: NAME_TAG
-name: "&bChange name"
-lore:
-- "&7Choose a new name"
-- "&7for your Chester."
-- ""
-- "&eClick to rename!"
-stats:
-type: GLOBE_BANNER_PATTERN
-name: "&bStatistics"
-lore:
-- "&8» &7Objects picked-up: &b%pickup%"
-- "&8» &7Objects dropped: &b%dropped%"
-- "&8» &7Distance traveled: &b%distance%"
-perks:
-type: OAK_SAPLING
-name: "&bPerks"
-lore:
-- "&7Upgrade your Chester"
-- "&7with this perks."
-- "&8» &7PerkPoints: &b%perk_points%"
-- ""
-- "&eClick to open!"
-perk_locked:
-type: RED_STAINED_GLASS_PANE
-name: "&cNot available"
-perk_upgrade:
-type: GREEN_STAINED_GLASS_PANE
-name: "&bUpgrade"
-lore:
-- "&8» &7Type: &b%perk_type%"
-- "&8» &7Value: &b%perk_value%"
-- "&8» &7Cost: &b%perk_cost%"
-- ""
-- "&eClick for buy!"
-perk_upgraded:
-type: LIME_STAINED_GLASS_PANE
-name: "&bUpgraded"
-lore:
-- "&8» &7Type: &b%perk_type%"
-- "&8» &7Value: &b%perk_value%"
-            </code></pre>
+   order_type:
+      type: BOOK
+      name: "&bOrder type"
+      lore:
+      - "&8- &7%order_normal%"
+      - "&8- &7%order_id%"
+      - "&8- &7%order_amount%"
+      - ""
+      - "&eClick to change!"
+   filter:
+      type: HOPPER
+      name: "&bFilters"
+      lore:
+      - "&7Select which items you"
+      - "&7want Chester to collect"
+      - "&7from the ground."
+      - ""
+      - "&eClick to change!"
+   next:
+      type: PAPER
+      name: "&eNext page (%perks_actual_page%-%perks_pages%)"
+   previous:
+      type: PAPER
+      name: "&ePrevious page (%perks_actual_page%-%perks_pages%)"
+   close:
+      type: ARROW
+      name: "&cExit"
+   back:
+      type: ARROW
+      name: "&cReturn"
+   profile:
+      type: CHEST
+      name: "&bProfile"
+      lore:
+      - ""
+      - "&eClick to view!"
+   info:
+      type: CHEST
+      name: "&bInformations"
+      lore:
+      - "&7Name: %chester%"
+      - "&7Heath: %health%/%max_health%"
+      - "&7PerkPoints: %perk_points%"
+   invalid_slot:
+      type: GRAY_STAINED_GLASS_PANE
+      name: "&cSlot yet to be unlocked"
+      lore:
+      - "&8» &7Price: &b$%price%"
+      - ""
+      - "&eClick to purchase!"
+   invalid_slot_for_buy:
+      type: GRAY_STAINED_GLASS_PANE
+      name: "&cSlot yet to be unlocked"
+   change_name:
+      type: NAME_TAG
+      name: "&bChange name"
+      lore:
+      - "&7Choose a new name"
+      - "&7for your Chester."
+      - ""
+      - "&eClick to rename!"
+   stats:
+      type: GLOBE_BANNER_PATTERN
+      name: "&bStatistics"
+      lore:
+      - "&8» &7Objects picked-up: &b%pickup%"
+      - "&8» &7Objects dropped: &b%dropped%"
+      - "&8» &7Distance traveled: &b%distance%"
+   perks:
+      type: OAK_SAPLING
+      name: "&bPerks"
+      lore:
+      - "&7Upgrade your Chester"
+      - "&7with this perks."
+      - "&8» &7PerkPoints: &b%perk_points%"
+      - ""
+      - "&eClick to open!"
+   perk_locked:
+      type: RED_STAINED_GLASS_PANE
+      name: "&cNot available"
+   perk_upgrade:
+      type: GREEN_STAINED_GLASS_PANE
+      name: "&bUpgrade"
+      lore:
+      - "&8» &7Type: &b%perk_type%"
+      - "&8» &7Value: &b%perk_value%"
+      - "&8» &7Cost: &b%perk_cost%"
+      - ""
+      - "&eClick for buy!"
+   perk_upgraded:
+      type: LIME_STAINED_GLASS_PANE
+      name: "&bUpgraded"
+      lore:
+      - "&8» &7Type: &b%perk_type%"
+      - "&8» &7Value: &b%perk_value%"
+   pickup:
+      type: DIAMOND
+      name: "&bPick-up"
+      lore:
+      - ""
+      - "&eClick to pick-up!"
+                    </code></pre>
+                </div>
+            </div>
+            <div class="content" id="config">
+                <div class="title"><h3>Config</h3></div>
+                <div class="text">
+                    <p>Choose the language, change the menus, sounds, perk points.</p>
+                    <button type="button" onclick="show('config_spoiler')" class="spoiler">config.yml</button>
+                    <pre><code id="config_spoiler" style="display: none;">
+lang: spanish
+main_inv: # Material or ID/Durability
+   background: GRAY_STAINED_GLASS_PANE
+   border: BLACK_STAINED_GLASS_PANE
+inv:
+   border: ORANGE_STAINED_GLASS_PANE
+perks_inv:
+   border: GRAY_STAINED_GLASS_PANE
+filters_inv:
+   border: GRAY_STAINED_GLASS_PANE
+perkpoints:
+   cooldown: 300 # seconds
+   amount: 1
+sound:
+   true: BLOCK_NOTE_BLOCK_BASS
+   fail: BLOCK_ANVIL_DESTROY
+   walk: BLOCK_BAMBOO_STEP
+   death: ENTITY_ARMOR_STAND_BREAK
+   damage: ENTITY_ARMOR_STAND_HIT
+   pickup: ENTITY_ITEM_PICKUP
+   eat: ENTITY_PARROT_EAT
+
+# Spigot: 1.15
+# Sounds list: https://helpch.at/docs/1.15/index.html?org/bukkit/Sound.html
+
+# Spigot: 1.8.8
+# Sounds list: https://helpch.at/docs/1.8.8/index.html?org/bukkit/Sound.html
+                    </code></pre>
+                </div>
+            </div>
+            <div class="content" id="filters">
+                <div class="title"><h3>Filters</h3></div>
+                <div class="text">
+                    <p>If you only need your Chester to collect specific materials, activate the filters. These will help you avoid occupying the storage with junk materials.</p>
+                    <button type="button" onclick="show('filter_spoiler')" class="spoiler">filter.yml</button>
+
+                    <pre><code id="filter_spoiler" style="display: none;">
+name: "Wood"
+slot: 21
+item:
+    type: IRON_AXE
+    name: "&bWood"
+    lore:
+    - "&7Status: %filter_wood_status%"
+    - "&7List:"
+    - "&8 - &7Oak log/planks"
+    - "&8 - &7Spruce log/planks"
+    - "&8 - &7Jungle log/planks"
+    - "&8 - &7Acacia log/planks"
+    - "&8 - &7..."
+materials:
+- LOG
+- WOOD
+- WOOD_STEP
+                    </code></pre>
+                </div>
+            </div>
         </div>
     </section>
 </body>
