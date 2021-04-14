@@ -1,14 +1,14 @@
 :root {
     /*  NAVBAR  */
-    --background-color: #0d1117;
-    --navbar: #161b22;
+    --background-color: #000a12;
+    --navbar: #263238;
 
-    --botton: #21262d;
-    --botton-select: #102233;
+    --botton: #263238;
+    --botton-select: #4f5b62;
 
-    --text: #f0f6fc;
-    --text-hover: #f0f6fcb3;
-    --logo: #CADAEB;
+    --text: #ffffff;
+    --text-hover: #0093c4;
+    --logo: #0093c4;
 
     /*  TITLE   */
     --title: #c9d1d9;
@@ -25,12 +25,6 @@
 
     /*  GUIDE   */
     --guide-background: var(--navbar);
-
-    /*  INDEX   */
-    --guide-index-backgroud: #ecf0f3;
-    --guide-index-border: #CADAEB;
-    --guide-index-text: black;
-    --guide-index-text-hover: #1c67c9;
 
     /*  MISC    */
     --guide-title: #f3f3f3;

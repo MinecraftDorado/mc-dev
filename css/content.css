@@ -1,0 +1,42 @@
+.content {
+    margin: 9rem 0 .6rem 0;
+    display: flex;
+    flex-direction: row;
+    flex-basis: 21.56rem;
+    flex-flow: row wrap;
+    gap: 1.25rem;
+    justify-content: center;
+}
+.content .items {
+    background-color: var(--content-background);
+    width: 21.56rem;
+    height: 20.62rem;
+    text-align: center;
+    border-radius: 10px;
+    text-decoration: none;
+}
+.content .items img, .content .items svg {
+    padding-top: 1.25rem;
+    max-height: 7.81rem;
+    fill: var(--text);
+}
+.content .items p {
+    color: var(--content-text);
+    word-break: break-word;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    padding: .625rem 1.25rem .312rem 1.25rem;
+}
+.content .items h3 {
+    color: var(--content-title);
+    word-break: break-word;
+    font-size: 1.125rem;
+    font-weight: 700;
+    line-height: 30px;
+    padding: 1.25rem 1.25rem .312rem;
+}
+.content .items:hover {
+    margin-top: -.625rem;
+    background-color: var(--botton-select);
+    transition-duration: .3s;
+} 

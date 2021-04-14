@@ -9,11 +9,12 @@
     <link href="../css/navbar.css" rel="stylesheet">
     <link href="../css/guide/cards.css" rel="stylesheet">
     <link href="../css/guide/content.css" rel="stylesheet">
+    <link href="../css/guide/spoiler.css" rel="stylesheet">
 
     <script type="text/javascript" src="../js/spoiler.js"></script>
 
     <!-- FONTAWESOME -->
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/4f596f3945.js" crossorigin="anonymous"></script>
 
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 </head>
@@ -138,6 +139,8 @@
                         <li>Done, your item is posted in the market!</li>
                     </ol>
 
+                    <br>
+
                     <h4>Using the market:</h4>
                     <ol>
                         <li>Goto the BlackMarket NPC</li>
@@ -192,7 +195,7 @@
     
                     <button type="button" onclick="show('config_spoiler')" class="spoiler">config.yml</button>
     
-                    <p class="code" id="config_spoiler" style="display: none;">
+                    <pre><code class="code" id="config_spoiler" style="display: none;">
 lang: en_US
 
 mysql:
@@ -306,7 +309,7 @@ confirm_menu_enable: false
 
 sell_alias:
 - sell
-                    </p>
+                    </code></pre>
                 </div>
             </div>
             <div class="content" id="languages">
@@ -318,7 +321,7 @@ sell_alias:
 
                     <button type="button" onclick="show('lang_spoiler')" class="spoiler">example.yml</button>
     
-                    <p class="code" id="lang_spoiler" style="display: none;">
+                    <pre><code class="code" id="lang_spoiler" style="display: none;">
 no_permission: "&cYou don't have permission to use this command!"
 only_player: "&cThis command only can be used by Players!"
 offline_player: "&c(&4%player%&c) is offline!"
@@ -543,7 +546,7 @@ time_data: # Example 16h 23m
     hour: "h"
     minute: "m"
     second: "s"
-                    </p>
+                    </code></pre>
                 </div>
             </div>
             <div class="content" id="blacklist">
