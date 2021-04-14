@@ -56,25 +56,33 @@
                 <div class="title"><h3>How sell a item?</h3></div>
                 <div class="text"><p>You have two options to publish an item, with commands or through the menu</p></div>
             </a>
+            <a class="card categories" href="#categories">
+                <div class="title"><h3>Categories</h3></div>
+                <div class="text"><p>Create a list with the materials of your category</p></div>
+            </a>
+            <a class="card menus" href="#menus">
+                <div class="title"><h3>Menus</h3></div>
+                <div class="text"><p>Do you want to see what inventories you can find in the store? Click here!</p></div>
+            </a>
+            <a class="card npc" href="#npc">
+                <div class="title"><h3>NPC</h3></div>
+                <div class="text"><p>Spawn a merchant to buy items from him</p></div>
+            </a>
             <a class="card statistic" href="#statistics">
                 <div class="title"><h3>Statistics</h3></div>
                 <div class="text"><p>*Coming soon*</p></div>
             </a>
-            <a class="card blacklist" href="#blacklist">
-                <div class="title"><h3>BlackList</h3></div>
-                <div class="text"><p>List of materials that are blocked for publication in the store.</p></div>
-            </a>
-            <a class="card categories" href="#categories">
-                <div class="title"><h3>Categories</h3></div>
-                <div class="text"><p>Create a list with the materials of your category</p></div>
+            <a class="card config" href="#config">
+                <div class="title"><h3>Configuration</h3></div>
+                <div class="text"><p>Change the values for taxes, materials, menus, command aliases, etc.</p></div>
             </a>
             <a class="card papyrus" href="#languages">
                 <div class="title"><h3>Languages</h3></div>
                 <div class="text"><p>Configure the messages of the commands, menus, items, etc. There are many languages added!</p></div>
             </a>
-            <a class="card config" href="#config">
-                <div class="title"><h3>Configuration</h3></div>
-                <div class="text"><p>Change the values for taxes, materials, menus, command aliases, etc.</p></div>
+            <a class="card blacklist" href="#blacklist">
+                <div class="title"><h3>BlackList</h3></div>
+                <div class="text"><p>List of materials that are blocked for publication in the store.</p></div>
             </a>
         </div>
 
@@ -82,6 +90,7 @@
             <div class="content" id="commands">
                 <div class="title"><h3>Commands</h3></div>
                 <div class="text">
+                    <p>These are all the commands you can execute, remember that you need the permissions.</p>
                     <ul>
                         <li><p class="cmd">/bm sell [value]</p> - <i>Sell a item</i></li>
                         <li><p class="cmd">/bm reload</p> - <i>Reload config</i></li>
@@ -95,18 +104,20 @@
             <div class="content" id="permissions">
                 <div class="title"><h3>Permissions</h3></div>
                 <div class="text">
+                    <p>Set the permissions correctly, you don't want someone spawn some npcs.</p>
                     <ul>
                         <li><p class="cmd">blackmarket.admin</p> - <i>Allow use all commands</i></li>
                         <ul>
-                            <li><p class="cmd">blackmarket.open</p> - <i>Allow use open command</i></li>
-                            <li><p class="cmd">blackmarket.reload</p> - <i>Allow use reload command</i></li>
-                            <li><p class="cmd">blackmarket.npc</p> - <i>Allow use setnpc and removenpc commands</i></li>
+                            <li><p class="cmd">blackmarket.open</p> - <i>Open the market with a command</i></li>
+                            <li><p class="cmd">blackmarket.reload</p> - <i>Reload command</i></li>
+                            <li><p class="cmd">blackmarket.npc.*</p> - <i>Allow use setnpc and removenpc commands</i></li>
                             <ul>
-                                <li><p class="cmd">blackmarket.setnpc</p> - <i>Allow use setnpc command</i></li>
-                                <li><p class="cmd">blackmarket.removenpc</p> - <i>Allow use removenpc command</i></li>
+                                <li><p class="cmd">blackmarket.npc.set</p> - <i>Spawn a NPC</i></li>
+                                <li><p class="cmd">blackmarket.npc.remove</p> - <i>Remove a NPC</i></li>
                             </ul>
-                            <li><p class="cmd">blackmarket.limit</p> - <i>Unlimited items in sell</i></li>
-                            <li><p class="cmd">blackmarket.limit[number]</p> - <i>Limited items in sell</i></li>
+                            <li><p class="cmd">blackmarket.limit</p> - <i>Unlimited posts</i></li>
+                            <li><p class="cmd">blackmarket.limit[number]</p> - <i>Limited post</i></li>
+                            <li><p class="cmd">blackmarket.remove_item</p> - <i>Cancel any post</i></li>
                         </ul>
                     </ul>
                 </div>
@@ -115,62 +126,433 @@
             <div class="content" id="sell">
                 <div class="title"><h3>Sell</h3></div>
                 <div class="text">
-                    <img src="../img/blackmarket/market.png"></img>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium maxime iusto commodi id exercitationem optio officiis veniam mollitia molestias iure laudantium quasi facere, quo, beatae perspiciatis repellendus? Eaque, soluta totam?</p>
+                    <p>If you need to publish an article you can do it using the command <i>/bm sell [value]</i> or using the aliases that are configured.
+                         But, if you don't like this method you can also do it through the BlackMarket menu, just open the menu, select the item to publish, and choose what you want to sell.</p>
+                    <p>No has entendido mis super pasos a pasos?, bueno, esta bien, sigue estas sencillas instrucciones...</p>
+
+                    <h4>Using command:</h4>
+                    <ol>
+                        <li>Press <b>T</b> key to open the chat</li>
+                        <li>Write <i>/bm sell [value]</i>, and replace <b>[value]</b> for the price of your item</li>
+                        <li>Press <b>ENTER</b></li>
+                        <li>Done, your item is posted in the market!</li>
+                    </ol>
+
+                    <h4>Using the market:</h4>
+                    <ol>
+                        <li>Goto the BlackMarket NPC</li>
+                        <li>Interact with him</li>
+                        <li>Find the item that says <i>"Sales menu"</i></li>
+                        <li>Right click him</li>
+                        <li>Select the item you want to sell from your inventory</li>
+                        <li>Click on <i>"Value"</i></li>
+                        <li>Press <b>T</b> key to open the chat</li>
+                        <li>Write into the chat your item value</li>
+                        <li>Press <b>ENTER</b></li>
+                        <li>Right click on the item <i>"Post"</i></li>
+                        <li>Done, your item is posted in the market!</li>
+                    </ol>
+                </div>
+            </div>
+            <div class="content" id="categories">
+                <div class="title"><h3>Categories</h3></div>
+                <div class="text">
+                    <p>They are lists of materials or objects belonging to the same class. It can be useful to separate <i>Blocks</i>, <i>Tools</i>, <i>Armor</i> and <i>Redstone</i>, in different sections.</p>
                 </div>
             </div>
             <div class="content" id="menus">
                 <div class="title"><h3>Menus</h3></div>
-                <div class="text">
-                    <img src="../img/blackmarket/storage.png"></img>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum perspiciatis, consectetur nesciunt nisi cum necessitatibus.</p>
+
+                <div class="cards">
+                    <a class="card market">
+                        <div class="title"><h3>Market</h3></div>
+                        <div class="text"><p>It is the main menu of the store. Here are the publications, categories, access to storage, publication of items, etc.</p></div>
+                    </a>
+                    <a class="card storage">
+                        <div class="title"><h3>Storage</h3></div>
+                        <div class="text"><p>Your publications that have expired will appear in this menu so that you can grab them.</p></div>
+                    </a>
+                    <a class="card inspect">
+                        <div class="title"><h3>Content</h3></div>
+                        <div class="text"><p>It is used to preview the content of the shulkers box.</p></div>
+                    </a>
                 </div>
             </div>
             <div class="content" id="npc">
                 <div class="title"><h3>NPC</h3></div>
                 <div class="text">
-                    <img src="../img/blackmarket/market.png"></img>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit voluptates similique natus, eius quod nemo?</p>
+                    <p>To set an NPC you need to have <i>blackmarket.npc.set</i>permission, then run the <i>/bm setnpc</i> command to spawn it.</p>
+                    <p>You can also change the skin with which the NPC will appear by adding at the end of the command the name of the player <i>/bm setnpc [player_name]</i> or the skin that you have saved in the file <i>skindata.yml</i> <i>/bm setnpc skin_[name]</i></p>
                 </div>
             </div>
             <div class="content" id="config">
                 <div class="title"><h3>Configuration</h3></div>
                 <div class="text">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque minima nemo libero facilis asperiores. Ut.</p>
+                    <p>If you need to change the language, taxes, database, menu materials, etc. enter this file and change the values you need. Remember that you can use the <i>/bm reload</i> command to reload the configuration.</p>
     
                     <button type="button" onclick="show('config_spoiler')" class="spoiler">config.yml</button>
     
                     <p class="code" id="config_spoiler" style="display: none;">
-name: Present Chester
-material: CYAN_SHULKER_BOX
-max_health: 200
-fire_resistance: true
-speed: 1.1
-item_finder_ratio: 5
-resistance:
-all: 25
-explosion: 0
+lang: en_US
+
+mysql:
+  enable: false
+  host: "localhost"
+  port: 3306
+  user: "root"
+  pass: ""
+  database: "server"
+
+# BETA (MySQL need be enabled)
+multi_server:
+  enable: false
+  check_new_items: 1 # seconds
+
+economy_type: VAULT # VAULT - PLAYERPOINTS - GEMSECONOMY#Currency
+
+menus:
+  market: # You can use custom models like this -> material#custom_model_id - GRAY_STAINED_GLASS_PANE#2200002
+    background: GRAY_STAINED_GLASS_PANE
+    border: BLACK_STAINED_GLASS_PANE
+    sales:
+      type: NETHER_STAR
+      slot: 47
+    next:
+      type: PAPER
+      slot: 53
+    previous:
+      type: PAPER
+      slot: 46
+    close:
+      type: ARROW
+      slot: 49
+    order:
+      type: BOOK
+      slot: 51
+    info:
+      type: REDSTONE_TORCH_ON
+      slot: 50
+    storage:
+      type: CHEST
+      slot: 52
+    categories:
+      all:
+        type: NETHER_STAR
+      ores:
+        type: IRON_PICKAXE
+      potions:
+        type: POTION
+      redstone:
+        type: REDSTONE
+      tools:
+        type: FISHING_ROD
+      wood:
+        type: IRON_AXE
+  storage:
+    background: GRAY_STAINED_GLASS_PANE
+    border: BLACK_STAINED_GLASS_PANE
+    back:
+      type: ARROW
+      slot: 49
+    take_items:
+      type: NETHER_STAR
+      slot: 50
+  sales:
+    background: GRAY_STAINED_GLASS_PANE
+    border: BLACK_STAINED_GLASS_PANE
+    back:
+      type: ARROW
+      slot: 49
+    item:
+      type: DIAMOND_SWORD
+      slot: 20
+    value:
+      type: SUNFLOWER
+      slot: 24
+    post:
+      type: EMERALD
+      slot: 22
+  content:
+    border: BLACK_STAINED_GLASS_PANE
+    back:
+      type: ARROW
+      slot: 49
+  confirm:
+    background: GRAY_STAINED_GLASS_PANE
+    border: BLACK_STAINED_GLASS_PANE
+    back:
+      type: ARROW
+      slot: 49
+    buy:
+      type: EMERALD
+      slot: 20
+    cancel:
+      type: BARRIER
+      slot: 24
+    item:
+      slot: 22
+
+minimum_price: 1.0
+maximum_price: 99999.0
+taxes: 7 # percent
+
+limit: 5 # items by user
+expired_time: 1440 # 1440 minutes = 24 hours
+
+blacklist_enable: false
+blacklistlore_enable: false
+
+confirm_menu_enable: false
+
+sell_alias:
+- sell
                     </p>
                 </div>
             </div>
             <div class="content" id="languages">
                 <div class="title"><h3>Languages</h3></div>
                 <div class="text">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque minima nemo libero facilis asperiores. Ut.</p>
-    
+                    <p>The plugin has many translations that the community send <b>(Thank you very much)</b>. If you want to add your own, or modify the messages, you need to go to the <i>BlackMarket/languages</i> folder.</p>
+
+                    <p>If you need an example of what the language file looks like, see the following:</p>
+
                     <button type="button" onclick="show('lang_spoiler')" class="spoiler">example.yml</button>
     
                     <p class="code" id="lang_spoiler" style="display: none;">
-name: Present Chester
-material: CYAN_SHULKER_BOX
-max_health: 200
-fire_resistance: true
-speed: 1.1
-item_finder_ratio: 5
-resistance:
-all: 25
-explosion: 0
+no_permission: "&cYou don't have permission to use this command!"
+only_player: "&cThis command only can be used by Players!"
+offline_player: "&c(&4%player%&c) is offline!"
+command:
+  sell:
+    message: "&eItem added!"
+    error_limit: "&cYou have reached the limit of published objects!"
+    error_item_not_found: "&cYour hand is empty, you need an item to sell!"
+    error_item_not_allow: "&cThis material is not valid in the market!"
+    error_value: "&cValue invalid!"
+    error_minimum_price: "&cThe minimum price is %price%!"
+    usage: "&cUsage /%cmd% (value)"
+  reload:
+    message: "&eReloaded configuration!"
+  setnpc:
+    message: "&eNPC placed in your position!"
+  removenpc: 
+    message: "&eRight click to a NPC to remove it!"
+    removed: "&eNPC removed!"
+    invalid: "&cNPC not detected!"
+
+help:
+- "&aBlackMarket - Commands:"
+- "&8 » &7/bm reload &8- &7(&fReload config&7)"
+- "&8 » &7/bm open [player] &8- &7(&fOpen the BlackMarket&7)"
+- "&8 » &7/bm setnpc [skin_name] &8- &7(&fSet a NPC&7)"
+- "&8 » &7/bm removenpc &8- &7(&fRemove a NPC&7)"
+- "&8 » &7/bm sell [value] &8- &7(&fPost an item&7)"
+
+market:
+  buy: "&eThanks for buy!"
+  inventory_full: "&cInventory full!"
+  item_invalid: "&cThis item is not for sale!"
+  missing_money: "&cYou haven't a money to buy this!"
+  item_owner: "&cYou can't buy your items!"
+  take_items: "&eItems taken!"
+  cancel_post: "&ePost cancelled!"
+  notification: "&eItem &a%name% &esold for &6%value%&e!"
+
+sales:
+  item_not_found: "&cChoose an item to sell from your inventory!"
+  value: "&eWrite the sale value of the item!"
+
+menus:
+  market:
+    title: "BlackMarket"
+    items:
+      sales:
+        name: "&bSales menu"
+        lore:
+        - "&7Menu to publish articles"
+        - "&7in the market."
+        - ""
+        - "&eClick to open!"
+      item_onsale:
+      - "&8Owner: &b%owner%"
+      - "&8Value: &6%value%$"
+      - "&8To expire: &b%expired%"
+      - ""
+      - "&eClick to buy!"
+      item_onsale_remove:
+      - "&cRight click to remove!"
+      item_onsale_content:
+      - "&3Middle click to inspect!"
+      next:
+        name: "&eNext page (%actual_page%-%pages%)"
+      previous:
+        name: "&ePrevious page (%actual_page%-%pages%)"
+      close:
+        name: "&cExit"
+      order:
+        name: "&bOrder type"
+        lore:
+        - "&8- &7%order_id%"
+        - "&8- &7%order_type%"
+        - "&8- &7%order_amount%"
+        - "&8- &7%order_value%"
+        - ""
+        - "&eLeft click to change!"
+        - "&eRight click to reverse!"
+        format: "%active% %value%"
+        active: "&c»&4"
+        values:
+          id: "IDs"
+          type: "Material"
+          amount: "Amount"
+          value: "Value"
+      info:
+        name: "&bInformation"
+        lore:
+        - "&7Cmd to sold /bm sell [amount]"
+        - "&4(Time to expired 24 hours)"
+      storage:
+        name: "&bStorage"
+        lore:
+        - "&7Your unsold items"
+        - ""
+        - "&eClick to open!"
+      categories:
+        all:    # categories/all.yml
+          name: "&bAll"
+          lore:
+          - "&7All items"
+        ores:
+          name: "&bOres"
+          lore:
+          - "&7List:"
+          - "&8 - &7Iron"
+          - "&8 - &7Gold"
+          - "&8 - &7Diamond"
+          - "&8 - &7Emerald"
+          - "&8 - &7..."
+        potions:
+          name: "&bPotions"
+          lore:
+          - "&7List:"
+          - "&8 - &7Potions"
+          - "&8 - &7Nether wart"
+          - "&8 - &7Blaze rod"
+          - "&8 - &7Ghast tear"
+          - "&8 - &7..."
+        redstone:
+          name: "&bRedstone"
+          lore:
+          - "&7List:"
+          - "&8 - &7Redstone"
+          - "&8 - &7TNT"
+          - "&8 - &7Dispenser"
+          - "&8 - &7Observer"
+          - "&8 - &7..."
+        tools:
+          name: "&bTools"
+          lore:
+          - "&7List:"
+          - "&8 - &7Shears"
+          - "&8 - &7Axe"
+          - "&8 - &7Pickaxe"
+          - "&8 - &7Shovel"
+          - "&8 - &7..."
+        wood:
+          name: "&bWood"
+          lore:
+          - "&7List:"
+          - "&8 - &7Oak log/planks"
+          - "&8 - &7Spruce log/planks"
+          - "&8 - &7Jungle log/planks"
+          - "&8 - &7Acacia log/planks"
+          - "&8 - &7..."
+  storage:
+    title: "BlackMarket - Storage"
+    items:
+      back:
+        name: "&cReturn"
+      take_items:
+        name: "&bTake items"
+        lore:
+        - "&7Take all items"
+        - ""
+        - "&eClick to take!"
+  sales:
+    title: "BlackMarket - Sales"
+    items:
+      back:
+        name: "&cCancel"
+        lore:
+        - "&eClick to cancel sell!"
+      post:
+        name: "&bPost"
+        lore:
+        - "&7Are you sure?"
+        - ""
+        - "&eClick to post!"
+      value:
+        name: "&bValue"
+        lore:
+        - "&7Actual: &6$%sale_value%"
+        - ""
+        - "&eClick to change price!"
+      item:
+        name: "&bItem"
+        lore:
+        - "&7Change this item so"
+        - "&7you can post."
+        - ""
+        - "&eClick to item in your"
+        - "&einventory to change!"
+      item_changed:
+      - ""
+      - "&eClick to item in your"
+      - "&einventory to change!"
+  content:
+    title: "BlackMarket - Content"
+    items:
+      back:
+        name: "&cReturn"
+  confirm:
+    title: "BlackMarket - Confirm"
+    items:
+      back:
+        name: "&cReturn"
+      buy:
+        name: "&aBuy"
+        lore:
+        - "&8Owner: &b%owner%"
+        - "&8Value: &6%value%$"
+        - ""
+        - "&eClick to buy!"
+      cancel:
+        name: "&cCancel"
+        lore:
+        - "§8Cancel the purchase"
+        - "&8of this item"
+        - ""
+        - "&eClick to cancel!"
+      
+npc:
+  name: "BlackMarket"
+  click: "&eClick here!"
+
+time_data: # Example 16h 23m
+    day: "d"
+    hour: "h"
+    minute: "m"
+    second: "s"
                     </p>
+                </div>
+            </div>
+            <div class="content" id="blacklist">
+                <div class="title"><h3>BlackList</h3></div>
+                <div class="text">
+                    <p>You can prohibit the publication of some articles in the store, for this you need to activate blacklist and blacklist_lore in the <i>config.yml</i> file.</p>
+                    <br>
+                    <p class="info">BlackList serves to prevent some materials from being sold.</p>
+                    <p class="info">BlackListLore will be in charge of analyzing the descriptions of the articles and preventing items that contain them from being published. <i>(Very useful for items given by Kits)</i></p>
                 </div>
             </div>
         </div>

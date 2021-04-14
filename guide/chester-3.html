@@ -127,15 +127,15 @@
                 <div class="title"><h3>Slots</h3></div>
                 <div class="text">
                     <p>Are spaces in Chester's inventory. Can be bought using <a href="https://www.spigotmc.org/resources/34315/" target="_blank">Vault</a> as dependency or with the command: <code>/chester add slots (amount) [player]</code>.</p>
-                    <div name="info"></div> <i>Chester picks up loose objects on the floor, if he no longer has slots available in the inventory, he will not be able to pick up anything else.</i>
-                    <div name="info"></div> <i>The maximum number of slots that each type of Chester can have to can be modified within its .yml (types/<b>type</b>.yml).</i>
+                    <i class="info">Chester picks up loose objects on the floor, if he no longer has slots available in the inventory, he will not be able to pick up anything else.</i>
+                    <i class="info">The maximum number of slots that each type of Chester can have to can be modified within its .yml (types/<b>type</b>.yml).</i>
                 </div>
             </div>
             <div class="content" id="custom_name">
                 <div class="title"><h3>Custom name</h3></div>
                 <div class="text">
                     <p>To rename our Chester, it is necessary to right-click it, open the profile menu and select the item <b>'Custon name'</b>. When the menu closes, the new name must be written in the chat.</p>
-                    <div name="info"></div> <i>To write the name in colors, we need to have the permission '<i>chester.custom_name.color</i>'</i>
+                    <i class="info">To write the name in colors, we need to have the permission '<i>chester.custom_name.color</i>'</i>
                 </div>
             </div>
             <div class="content" id="perks">
@@ -156,7 +156,7 @@
                         <li>REG_BOOST <i>(Add regeneration boost)</i></li>
                     </ul>
 
-                    <div name="info"></div> <i>To customize a perk or create your own, enter the yml that you want to edit and change any of the following values:</i>
+                    <i class="info">To customize a perk or create your own, enter the yml that you want to edit and change any of the following values:</i>
 
                     <div>
                         <button type="button" onclick="show('perk_spoiler')" class="spoiler">perk.yml</button>
@@ -495,7 +495,6 @@ sound:
                 <div class="title"><h3>Filters</h3></div>
                 <div class="text">
                     <p>If you only need your Chester to collect specific materials, activate the filters. These will help you avoid occupying the storage with junk materials.</p>
-                    <div name="info"></div> <i></i>
                     <button type="button" onclick="show('filter_spoiler')" class="spoiler">filter.yml</button>
 
                     <pre><code id="filter_spoiler" style="display: none;">
