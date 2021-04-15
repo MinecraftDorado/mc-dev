@@ -17,6 +17,8 @@
     <script src="https://kit.fontawesome.com/4f596f3945.js" crossorigin="anonymous"></script>
 
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
+    <link rel="icon" type="icons/png" href="/img/icons/favicon.png">
 </head>
 <body>
     <nav>
@@ -26,8 +28,8 @@
             
             <li class="items list"><a><i class="fa fa-fw fa-book"></i> Guides</a>
                 <ul>
-                    <li><a href="/wiki/chester">Chester</a></li>
-                    <li><a href="/wiki/blackmarket">BlackMarket</a></li>
+                    <li><a href="/guide/chester">Chester</a></li>
+                    <li><a href="/guide/blackmarket">BlackMarket</a></li>
                 </ul>
             </li>
     
@@ -219,39 +221,44 @@ fire_resistance: true
 speed: 1.1
 item_finder_ratio: 5
 resistance:
-all: 25
-explosion: 0
-fire: 0
-projectile: 0
+   all: 25
+   explosion: 0
+   fire: 0
+   projectile: 0
 damage:
-by_owner: false
-by_players: true
-drop: false
+   by_owner: false
+   by_players: true
+   drop: false
 inmortal: true
 slots:
-unlocked: 28
-buy_enable: false
-price_base: 200
-price_extra: 30
-max: 28
+    unlocked: 28
+    buy_enable: false
+    price_base: 200
+    price_extra: 30
+    max: 28
 perks:
 - example # yml name (eg: /perks/example.yml -> example)
+filters:
+- ores # yml name (eg: /filters/ores.yml -> ores)
+- potions
+- tools
+- wood
 recipe:
-enable: false
-permission_enable: true
-craft:
-- K K K
-- K C K
-- K K K
-materials:
-C: CHEST
-K: CAKE
+    enable: false
+    permission_enable: true
+    craft:
+    - K K K
+    - K C K
+    - K K K
+    materials:
+        C: CHEST
+        K: CAKE
 item:
-type: PLAYER_HEAD
-owner: "MHF_Present2"
-name: "&bExample"
-lore:
-- "&ePlace in order to spawn!"
+    type: PLAYER_HEAD
+    owner: "MHF_Present2"
+    name: "&bExample"
+    lore:
+    - "&ePlace in order to spawn!"
 food: # Material or ID/DATA and Health
 - WHEAT 2
 - MILK_BUCKET 5
