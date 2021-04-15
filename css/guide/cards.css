@@ -37,56 +37,98 @@
 }
 
 .chest {
-    background-image: url("../../img/guide/chester/chest.svg");
+    background-image: url("../../img/icons/chest.svg");
     background-repeat: no-repeat;
     background-size: 106px;
     background-position: center 14px;
 }
 
 .papyrus {
-    background-image: url("../../img/guide/chester/papyrus.svg");
+    background-image: url("../../img/icons/papyrus.svg");
     background-repeat: no-repeat;
     background-size: 106px;
     background-position: center 14px;
 }
 
 .command {
-    background-image: url("../../img/guide/chester/command.svg");
+    background-image: url("../../img/icons/command.svg");
     background-repeat: no-repeat;
     background-size: 106px;
     background-position: center 14px;
 }
 
 .custom_name {
-    background-image: url("../../img/guide/chester/custom_name.svg");
+    background-image: url("../../img/icons/custom_name.svg");
     background-repeat: no-repeat;
     background-size: 106px;
     background-position: center 14px;
 }
 
 .permission {
-    background-image: url("../../img/guide/chester/permission.svg");
+    background-image: url("../../img/icons/permission.svg");
     background-repeat: no-repeat;
     background-size: 106px;
     background-position: center 14px;
 }
 
 .statistic {
-    background-image: url("../../img/guide/chester/statistic.svg");
+    background-image: url("../../img/icons/statistic.svg");
     background-repeat: no-repeat;
     background-size: 106px;
     background-position: center 14px;
 }
 
 .inventory {
-    background-image: url("../../img/guide/chester/inventory.svg");
+    background-image: url("../../img/icons/inventory.svg");
     background-repeat: no-repeat;
     background-size: 106px;
     background-position: center 14px;
 }
 
 .perk {
-    background-image: url("../../img/guide/chester/perk.svg");
+    background-image: url("../../img/icons/perk.svg");
+    background-repeat: no-repeat;
+    background-size: 106px;
+    background-position: center 14px;
+}
+
+.blacklist {
+    background-image: url("../../img/icons/blacklist.svg");
+    background-repeat: no-repeat;
+    background-size: 106px;
+    background-position: center 14px;
+}
+
+.categories {
+    background-image: url("../../img/icons/categories.svg");
+    background-repeat: no-repeat;
+    background-size: 106px;
+    background-position: center 14px;
+}
+
+.filter {
+    background-image: url("../../img/icons/filter.svg");
+    background-repeat: no-repeat;
+    background-size: 106px;
+    background-position: center 14px;
+}
+
+.menus {
+    background-image: url("../../img/icons/menu.svg");
+    background-repeat: no-repeat;
+    background-size: 106px;
+    background-position: center 14px;
+}
+
+.npc {
+    background-image: url("../../img/icons/npc.svg");
+    background-repeat: no-repeat;
+    background-size: 106px;
+    background-position: center 14px;
+}
+
+.sell {
+    background-image: url("../../img/icons/sell.svg");
     background-repeat: no-repeat;
     background-size: 106px;
     background-position: center 14px;

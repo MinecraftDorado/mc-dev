@@ -91,6 +91,14 @@
     margin-bottom: 1rem;
 }
 
+.content > .text a {
+    color: var(--guide-link);
+}
+
+.content > .text a:hover {
+    color: var(--guide-link-hover);
+}
+
 .content > .text > h4 {
     color: var(--content-title);
 }
