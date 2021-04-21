@@ -20,6 +20,7 @@ pre {
     -webkit-border-radius: 0px 0px 6px 6px;
     -moz-border-radius: 0px 0px 6px 6px;
     border-radius: 0px 60px var(--content-background-ratio) var(--content-background-ratio);
+    overflow: scroll;
 }
 
 code {
